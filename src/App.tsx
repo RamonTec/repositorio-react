@@ -141,8 +141,8 @@ function App() {
                 <span className="underline decoration-indigo-500">Elias Estrabao</span>{' '}un {''}
                 <span className="underline decoration-indigo-500">desarrollador de software.</span>{''}
                 {' '}<span>Creando sistemas a medida con</span>
-                {' '}<span className="underline decoration-indigo-500">precision</span>{''}  en cada
-                {' '}<span className="underline decoration-indigo-500">pixel</span>
+                {' '}<span className="underline decoration-indigo-500">precision</span>{''} y en cada
+                {' '}<span className="underline decoration-indigo-500">linea de codigo</span>
               </p>
               
               <div className='mt-10 flex justify-center sm:justify-start'>

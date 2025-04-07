@@ -7,7 +7,7 @@ interface CardProps {
 
 const CardTech: React.FC<CardProps> = ({ imgSrc, title }) => {
   return (
-    <div className="relative sm:w-40 md:w-40 lg:w-3/3 xl:w-3/3">
+    <div className="relative sm:w-40 md:w-40 lg:w-3/3 xl:w-3/3 p-2 sm:p-0">
       <div className="bg-transparent rounded-lg overflow-hidden">
         <div className="group relative">
           <img className="w-40 h-40 object-scale-down object-center" src={imgSrc} alt={title} />

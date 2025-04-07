@@ -43,9 +43,35 @@ function App() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: true,
+    centerMode: true,
     speed: 3000,
     autoplaySpeed: 3000,
-    cssEase: "linear"
+    cssEase: "linear",
+    responsive: [
+      
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        }
+      },
+      {
+        breakpoint: 320,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      },
+      
+    ]
   };
 
   interface TabProps {
@@ -93,9 +119,9 @@ function App() {
     <div className="">
       <Header />
 
-      <div className='container mx-auto mt-8 grid grid-cols-11 font-mono gap-8'>
+      <div className='container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-10 md:grid-cols-1 lg:grid-cols-11 font-mono gap-8 p-2'>
 
-        <div className='lg:col-span-3 flex flex-col items-center justify-center border-2 rounded-xl p-5'>
+        <div className='xs:col-span-1 sm:col-span-12 lg:col-span-3 flex flex-col items-center justify-center border-2 rounded-xl p-5'>
           <img className="hover:shadow-cyan-500/50 shadow-lg rounded-full w-60 h-60 mb-4 md:mb-0 " src={eliasDev} alt='elias dev' />
           <p className="text-white font-bold text-xl mb-2 mt-5">Elias Estrabao</p>
           <AnimatedTitleList titles={titles} delay={2000} />
@@ -104,11 +130,11 @@ function App() {
           </p>
         </div>
 
-        <div className="lg:col-span-8 flex flex-col justify-start text-white text-3xl ">
+        <div className="xs:col-span-12 sm:col-span-12 lg:col-span-8 flex flex-col justify-start text-white text-3xl ">
           
-          <div className='container mx-auto grid grid-cols-11 gap-4'>
+          <div className='container mx-auto grid grid-cols-1 gap-4'>
             
-            <div className='lg:col-span-12 border-2 rounded-lg p-5'>
+            <div className='lg:col-span-12 border-2 rounded-lg p-5 text-base sm:text-justify'>
               <h3 className="text-white text-2xl mb-4">Hola!</h3>
               <p>
               Soy {''}
@@ -119,7 +145,7 @@ function App() {
                 {' '}<span className="underline decoration-indigo-500">pixel</span>
               </p>
               
-              <div className='mt-10'>
+              <div className='mt-10 flex justify-center sm:justify-start'>
                 <button className='bg-white text-black rounded-lg text-xl p-2'>Descargar CV</button>
               </div>
             </div>

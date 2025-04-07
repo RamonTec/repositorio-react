@@ -4,7 +4,7 @@ function Header() {
   const Navbar = () => {
     return (
       <header>
-        <nav className="bg-transparent mt-4">
+        <nav className="bg-transparent mt-4 p-5">
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
     
             <div className="md:order-1">

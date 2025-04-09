@@ -68,6 +68,65 @@ import redux from './assets/reduxLogo.png';
 import jest from './assets/jest.png';
 
 
+export const ownProjectsData = [
+  {
+    title: 'Carolina Spa',
+    description: 'Proyecto de practica',
+    cargo: 'Front-end',
+    skills: ['Quasar', 'Vue'],
+    img: carolinaLogo,
+    link: 'https://carolina-spa.vercel.app/#/'
+  },
+  {
+    title: 'Todo Machine',
+    description: 'Proyecto de practica',
+    cargo: 'Front-end',
+    skills: ['React', 'Html', 'Css'],
+    img: reactLogo,
+    link: 'https://todos-machine.vercel.app'
+  },
+  {
+    title: 'Youtube Test',
+    description: 'Proyecto de prueba tecnica',
+    cargo: 'Front-end',
+    skills: ['Nuxt', 'Vue', 'Tailwindcss'],
+    img: nuxtjsLogo,
+    link: 'https://youtube-test-orpin.vercel.app'
+  },
+  {
+    title: 'Orion Studios',
+    description: 'Agencia de desarrollo en Venezuela',
+    cargo: 'Front-end',
+    skills: ['Quasar', 'Vue'],
+    img: vueLogo,
+    link: 'https://orionstudio.tech/#/'
+  },
+  {
+    title: 'Urano Jets',
+    description: 'Proyecto Freelance',
+    cargo: 'Front-end',
+    skills: ['React', 'Material Ui', 'TypeScript'],
+    img: reactLogo,
+    link: 'https://urano-jets.vercel.app'
+  },
+  {
+    title: 'FanFlex',
+    description: 'Proyecto Freelance - Sitio web para reservas de restaurantes',
+    cargo: 'Front-end',
+    skills: ['React', 'Material Ui', 'TypeScript'],
+    img: fanflexLogo,
+    link: ''
+  },
+  {
+    title: 'Manifestor',
+    description: 'Proyecto Freelance - Sitio web con IA como asistente',
+    cargo: 'Front-end',
+    skills: ['React', 'Material Ui', 'TypeScript'],
+    img: manifestorLogo,
+    link: ''
+  },
+];
+
 export const projectData = [
   {
     title: 'Qst Digital',
@@ -115,81 +174,6 @@ export const projectData = [
     cargo: 'Front-end developer',
     skills: ['Laravel', 'Vue'],
     img: reactLogo,
-    link: ''
-  },
-  
-  
-  
-  {
-    title: 'Carolina Spa',
-    description: 'Proyecto de practica',
-    cargo: 'Front-end',
-    skills: ['Quasar', 'Vue'],
-    img: carolinaLogo,
-    link: 'https://carolina-spa.vercel.app/#/'
-  },
-  {
-    title: 'Todo Machine',
-    description: 'Proyecto de practica',
-    cargo: 'Front-end',
-    skills: ['React', 'Html', 'Css'],
-    img: reactLogo,
-    link: 'https://todos-machine.vercel.app'
-  },
-  {
-    title: 'Youtube Test',
-    description: 'Proyecto de prueba tecnica',
-    cargo: 'Front-end',
-    skills: ['Nuxt', 'Vue', 'Tailwindcss'],
-    img: nuxtjsLogo,
-    link: 'https://youtube-test-orpin.vercel.app'
-  },
-  {
-    title: 'Orion Studios',
-    description: 'Agencia de desarrollo en Venezuela',
-    cargo: 'Front-end',
-    skills: ['Quasar', 'Vue'],
-    img: vueLogo,
-    link: 'https://orionstudio.tech/#/'
-  },
-  {
-    title: 'Urano Jets',
-    description: 'Proyecto Freelance',
-    cargo: 'Front-end',
-    skills: ['React', 'Material Ui', 'TypeScript'],
-    img: reactLogo,
-    link: 'https://urano-jets.vercel.app'
-  },
-  {
-    title: 'Tasa Cash',
-    description: 'Proyecto Freelance',
-    cargo: 'Front-end',
-    skills: ['React', 'Material Ui'],
-    img: tasaLogo,
-    link: 'https://urano-jets.vercel.app'
-  },
-  {
-    title: 'ForoChats',
-    description: 'Proyecto Freelance',
-    cargo: 'Front-end',
-    skills: ['React', 'Material Ui'],
-    img: forochatsLogo,
-    link: ''
-  },
-  {
-    title: 'FanFlex',
-    description: 'Proyecto Freelance - Sitio web para reservas de restaurantes',
-    cargo: 'Front-end',
-    skills: ['React', 'Material Ui', 'TypeScript'],
-    img: fanflexLogo,
-    link: ''
-  },
-  {
-    title: 'Manifestor',
-    description: 'Proyecto Freelance - Sitio web con IA como asistente',
-    cargo: 'Front-end',
-    skills: ['React', 'Material Ui', 'TypeScript'],
-    img: manifestorLogo,
     link: ''
   },
 ];
@@ -282,5 +266,60 @@ export const techData = [
   {
     title: 'Redux',
     img: redux,
+  },
+]
+
+export const experienceData = [
+  {
+    siteName: 'QS digital',
+    fromTo: '2024 - Presente',
+    roles: [
+      {
+        title: 'Frontend Developer',
+        description: 'Desarrollo de aplicaciones web con React, Next.js y TypeScript'
+      },
+      {
+        title: 'Scrum Master',
+        description: 'Facilitación de ceremonias ágiles y mejora de procesos'
+      }
+    ]
+  },
+  {
+    siteName: 'Kraken Tech Studios',
+    fromTo: '2023 - 2023',
+    roles: [
+      {
+        title: 'Frontend Developer',
+        description: 'Desarrollo de aplicaciones web con React, Next.js, TypeScript y MUI'
+      },
+    ]
+  },
+  {
+    siteName: 'CobuilLab',
+    fromTo: '2022 - 2023',
+    roles: [
+      {
+        title: 'Frontend Developer',
+        description: 'Desarrollo de aplicaciones web con React, Next.js y TypeScript, integración de APIs y desarrollo de aplicaciones móviles con React Native'
+      },
+      {
+        title: 'Backend Developer',
+        description: 'Desarrollo de API Graphql y modelado de base de datos relacionales'
+      },
+    ]
+  },
+  {
+    siteName: 'Orinco Dev',
+    fromTo: '2019 - 2022',
+    roles: [
+      {
+        title: 'Frontend Developer',
+        description: 'Desarrollo de aplicaciones web con Vue, Quasar, integración de APIs y desarrollo de sitios web responsive'
+      },
+      {
+        title: 'Backend Developer',
+        description: 'Desarrollo de API Graphql y modelado de base de datos con MongoDB, integracion de servicios como S3, Ec2 y SNS de AWS'
+      },
+    ]
   },
 ]

@@ -68,11 +68,31 @@ import redux from './assets/reduxLogo.png';
 import jest from './assets/jest.png';
 
 
-
-
-
-
 export const projectData = [
+  {
+    title: 'Qst Digital',
+    description: 'Agencia de desarrollo en Mexico',
+    cargo: 'Front-end developer',
+    skills: ['React', 'Nextjs', 'Material Ui', 'Angular'],
+    img: qstLogo,
+    link: 'https://qst-digital.vercel.app'
+  },
+  {
+    title: 'Kraken Tech Studios',
+    description: 'Consultora de desarrallo de software',
+    cargo: 'Front-end developer',
+    skills: ['Nextjs', 'React', 'Redux', 'api rest', 'Responsive Design', 'TypeScript'],
+    img: krakenLogo,
+    link: ''
+  },
+  {
+    title: 'Cobuild',
+    description: 'Empresa de desarrollo de software',
+    cargo: 'Full Stack Developer',
+    skills: ['React', 'React Native', '8base', 'Aws', 'Material UI', 'Native Base', 'TypeScript'],
+    img: cobuildLogo,
+    link: ''
+  },
   {
     title: 'Orinoco Dev',
     description: 'Pasarelas de pago para intercambio de monedas fiat y cripto',
@@ -97,30 +117,9 @@ export const projectData = [
     img: reactLogo,
     link: ''
   },
-  {
-    title: 'Qst Digital',
-    description: 'Agencia de desarrollo en Mexico',
-    cargo: 'Front-end developer',
-    skills: ['Html', 'Css', 'Bootstrap', 'Responsive Design'],
-    img: qstLogo,
-    link: 'https://qst-digital.vercel.app'
-  },
-  {
-    title: 'Kraken Tech Studios',
-    description: 'Consultora de desarrallo de software',
-    cargo: 'Front-end developer',
-    skills: ['Nextjs', 'React', 'Redux', 'api rest', 'Responsive Design', 'TypeScript'],
-    img: krakenLogo,
-    link: ''
-  },
-  {
-    title: 'Cobuild',
-    description: 'Empresa de desarrollo de software',
-    cargo: 'Full Stack Developer',
-    skills: ['React', 'React Native', '8base', 'Aws', 'Material UI', 'Native Base', 'TypeScript'],
-    img: cobuildLogo,
-    link: ''
-  },
+  
+  
+  
   {
     title: 'Carolina Spa',
     description: 'Proyecto de practica',

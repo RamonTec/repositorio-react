@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
-import Card from './components/Card';
+import React from 'react';
 import CardTech from './components/CardTech';
 import Header from './components/Header';
-import { projectData, techData } from './dataType';
 // @ts-ignore
 import eliasDev from './assets/eliasDev.png';
 import Slider from "react-slick";
@@ -25,16 +23,14 @@ import mongo from './assets/mongo.svg';
 // @ts-ignore
 import firebase from './assets/firebaseLogo.png';
 import AnimatedTitleList from './components/AnimatedTitleList';
+import { pdfBase64 } from './const';
+import { projectData } from './dataType';
+import Card from './components/Card';
+import { Grid } from '@mui/material';
 
 function App() {
 
   const titles = ['Frontend', 'Scrum master', 'Backend', 'Fullstack'];
-
-  const [activeTab, setActiveTab] = useState<'about' | 'projects' | 'skillsTech' | 'contact'>('about');
-
-  const handleTabClick = (tab: 'about' | 'projects' | 'skillsTech' | 'contact') => {
-    setActiveTab(tab);
-  };
 
   const settings = {
     dots: false,
@@ -74,44 +70,14 @@ function App() {
     ]
   };
 
-  interface TabProps {
-    label: string;
-    onClick: () => void;
-    isActive: boolean;
-  }
-  
-  const Tab: React.FC<TabProps> = ({ label, onClick, isActive }) => {
-    return (
-      <button
-        className={`px-4 py-2 transition-all duration-300 ${
-          isActive
-            ? 'bg-blue-500 text-white'
-            : 'text-blue-500 hover:bg-blue-100 hover:text-blue-700'
-        }`}
-        onClick={onClick}
-      >
-        {label}
-      </button>
-    );
-  };
-  
-  interface TabContentProps {
-    label: string;
-    children: React.ReactNode;
-    isActive: boolean;
-  }
-  
-  const TabContent: React.FC<TabContentProps> = ({ label, children, isActive }) => {
-    return (
-      <div
-        className={`mt-4 transition-all duration-300 ${
-          isActive ? 'opacity-100 max-h-96' : 'opacity-0 max-h-0 overflow-hidden'
-        }`}
-      >
-        <h2 className="text-2xl font-bold mb-4">{label}</h2>
-        {children}
-      </div>
-    );
+  const downloadCV = (): void => {
+    // Create a temporary anchor element
+    const link = document.createElement('a');
+    link.href = `data:application/pdf;base64,${pdfBase64}`;
+    link.download = 'Your-Name-CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
   
 
@@ -119,9 +85,9 @@ function App() {
     <div className="">
       <Header />
 
-      <div className='container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-10 md:grid-cols-1 lg:grid-cols-11 font-mono gap-8 p-2'>
+      <div className='container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-10 md:grid-cols-1 lg:grid-cols-11 font-mono gap-8 '>
 
-        <div className='xs:col-span-1 sm:col-span-12 lg:col-span-3 flex flex-col items-center justify-center border-2 rounded-xl p-5'>
+        <div className='xs:col-span-1 sm:col-span-12 lg:col-span-3 flex flex-col items-center justify-center border-2 rounded-xl'>
           <img className="hover:shadow-cyan-500/50 shadow-lg rounded-full w-60 h-60 mb-4 md:mb-0 " src={eliasDev} alt='elias dev' />
           <p className="text-white font-bold text-xl mb-2 mt-5">Elias Estrabao</p>
           <AnimatedTitleList titles={titles} delay={2000} />
@@ -141,12 +107,12 @@ function App() {
                 <span className="underline decoration-indigo-500">Elias Estrabao</span>{' '}un {''}
                 <span className="underline decoration-indigo-500">desarrollador de software.</span>{''}
                 {' '}<span>Creando sistemas a medida con</span>
-                {' '}<span className="underline decoration-indigo-500">precision</span>{''} y en cada
+                {' '}<span className="underline decoration-indigo-500">precision</span>{''} en cada
                 {' '}<span className="underline decoration-indigo-500">linea de codigo</span>
               </p>
               
               <div className='mt-10 flex justify-center sm:justify-start'>
-                <button className='bg-white text-black rounded-lg text-xl p-2'>Descargar CV</button>
+                <button onClick={downloadCV} className='bg-white text-black rounded-lg text-xl p-2'>Descargar CV</button>
               </div>
             </div>
 
@@ -183,6 +149,68 @@ function App() {
 
         </div>
         
+      </div>
+
+      <div className='container mx-auto mt-8 grid grid-cols-1 font-mono'>
+
+        <h3 className="text-white text-2xl mb-4 text-center">Habilidades</h3>
+        
+        <div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 text-white'>
+          <div className='border-2 rounded-lg p-5'>
+            <p className='text-center text-2xl'>Tecnicas</p>
+            <ul>
+              <li>Angular</li>
+              <li>NextJs</li>
+              <li>TypeScript</li>
+              <li>MongoDB</li>
+              <li>NestJs</li>
+              <li>GraphQL</li>
+              <li>CSS</li>
+              <li>Firebase</li>
+              <li>Tailwind</li>
+            </ul>
+          </div>
+          <div className='border-2 rounded-lg p-5'>
+            <p className='text-center text-2xl'>Blandas</p>
+            <ul>
+              <li>Trabajo en equipo</li>
+              <li>Resolucion de problemas</li>
+              <li>Adaptabilidad</li>
+              <li>Comunicación</li>
+              <li>Creatividad</li>
+              <li>Empatia</li>
+              <li>Responsabilidad</li>
+              <li>Proactividad</li>
+              <li>Autogestion</li>
+            </ul>
+          </div>
+          
+        </div>
+      </div>
+
+      <div className='container mx-auto mt-8 font-mono'>
+        <h3 className="text-white text-2xl mb-4 text-center">Trabajos y proyectos</h3>
+        <p className='text-white text-center mx-auto'>
+          Mira algunos de mis proyectos de practicas personales y algunos sitios en donde he trabajado, <br />
+          proyectos realizados en mi tiempo libre y algunos proyectos profesionales. <br />
+          Todos los proyectos fueron realizados con esfuerzo y dedicacion, buscando siempre a mejorar.
+        </p>
+        <Grid container justifyContent='center'>
+          {
+            projectData.map((project, index) => (
+              <Grid item xs={10} sm={5} md={4} lg={3} xl={3} key={index}>
+                <Card
+                  imgSrc={project.img} 
+                  title={project.title} 
+                  key={index} 
+                  description={project.description} 
+                  technologies={project.skills}
+                />
+              </Grid>
+            ))
+          }
+          
+        </Grid>
       </div>
 
     </div>

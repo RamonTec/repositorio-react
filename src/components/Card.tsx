@@ -9,7 +9,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ imgSrc, title, description, technologies }) => {
   return (
-    <div className=" sm:w-80 md:w-80 lg:w-3/3 xl:w-3/3 p-4">
+    <div className="text-start sm:w-80 md:w-80 lg:w-6/6 xl:w-3/3 p-4">
       <div className="bg-blue-900/30 bg-gradient-to-br hover:shadow-cyan-500/50 from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700">
         <img className="w-full h-60 object-scale-down object-center p-2" src={imgSrc} alt={title} />
         <div className=" inset-0 ">

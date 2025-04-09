@@ -1,14 +1,13 @@
 import React from "react";
+import { Title } from "./title";
 
 export const Skills: React.FC = () => {
   return (
     <div className="container mx-auto mt-12 px-4 text-center font-mono max-w-4xl">
-      <h3 className="text-white text-3xl mb-10 font-semibold relative inline-block mx-auto">
-        <span className="relative z-10 px-4">Habilidades</span>
-        <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></span>
-      </h3>
       
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Title title='Habilidades'/>
+      
+      <div className="grid grid-cols-1 mt-10 md:grid-cols-2 gap-8">
         
         <div className="border border-gray-700 rounded-xl p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group">
           <div className="flex items-center justify-center gap-3 mb-7">

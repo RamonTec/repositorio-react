@@ -323,3 +323,84 @@ export const experienceData = [
     ]
   },
 ]
+
+export const educationdata = [
+  {
+    title: 'TSU en Informatica',
+    fromTo: '2020 - 2023',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  }
+]
+
+export const courseData = [
+  {
+    title: 'Audio Curso de Inglés para el Uso de Preposiciones',
+    fromTo: 'Enero - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Audio Curso de Inglés para Viajes',
+    fromTo: 'Enero - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso Básico de Vocabulario y Expresiones en Inglés',
+    fromTo: 'Marzo - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Backend con Node.js: API REST con Express.js',
+    fromTo: 'Marzo - 2022',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Frontend Developer',
+    fromTo: 'Abril - 2023',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Inglés Básico A1 para Principiantes',
+    fromTo: 'Marzo - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Inglés Básico A1: Presente Simple y Vocabulario Común (2021)',
+    fromTo: 'Marzo - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Inglés Básico A2: Conectores y Artículos',
+    fromTo: 'Marzo - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Inglés Básico A2: Preguntas y Respuestas Comunes',
+    fromTo: 'Febrero - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Inglés Práctico sobre Elementos de Trabajo',
+    fromTo: 'Marzo - 2024',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de Inglés Práctico sobre los Miembros de la Familia',
+    fromTo: 'Marzo - 2024',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de TypeScript',
+    fromTo: 'Enero - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de TypeScript: Programación Orientada a Objetos y Asincronismo',
+    fromTo: 'Marzo - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+  {
+    title: 'Curso de TypeScript: Tipos Avanzados y Funciones',
+    fromTo: 'Febrero - 2025',
+    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+  },
+]

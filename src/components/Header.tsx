@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 
 function Header() {
 
@@ -8,7 +9,7 @@ function Header() {
           <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
     
             <div className="md:order-1">
-              <a href="/" className="text-white text-lg font-bold">EE</a>
+              <Link to="/" className="text-white text-lg font-bold">EE</Link>
             </div>
     
             <div className="md:order-2 mt-4 md:mt-0 flex sm:flex-row space-x-4">

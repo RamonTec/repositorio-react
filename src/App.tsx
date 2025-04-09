@@ -71,7 +71,6 @@ function App() {
   };
 
   const downloadCV = (): void => {
-    // Create a temporary anchor element
     const link = document.createElement('a');
     link.href = `data:application/pdf;base64,${pdfBase64}`;
     link.download = 'Your-Name-CV.pdf';
@@ -82,13 +81,13 @@ function App() {
   
 
   return (
-    <div className="">
+    <div className="p-2">
       <Header />
 
       <div className='container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-10 md:grid-cols-1 lg:grid-cols-11 font-mono gap-8 '>
 
-        <div className='xs:col-span-1 sm:col-span-12 lg:col-span-3 flex flex-col items-center justify-center border-2 rounded-xl'>
-          <img className="hover:shadow-cyan-500/50 shadow-lg rounded-full w-60 h-60 mb-4 md:mb-0 " src={eliasDev} alt='elias dev' />
+        <div className='xs:col-span-1 p-2 sm:col-span-12 lg:col-span-3 flex flex-col items-center justify-center bg-blue-900/30 bg-gradient-to-br hover:shadow-cyan-500/50 from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700'>
+          <img className="hover:shadow-cyan-500/50 shadow-lg rounded-full w-60 h-60 mb-4 md:mb-0" src={eliasDev} alt='elias dev' />
           <p className="text-white font-bold text-xl mb-2 mt-5">Elias Estrabao</p>
           <AnimatedTitleList titles={titles} delay={2000} />
           <p className="text-white text-justify">
@@ -100,7 +99,7 @@ function App() {
           
           <div className='container mx-auto grid grid-cols-1 gap-4'>
             
-            <div className='lg:col-span-12 border-2 rounded-lg p-5 text-base sm:text-justify'>
+            <div className='lg:col-span-12 p-5 text-base sm:text-justify bg-blue-900/30 bg-gradient-to-br hover:shadow-cyan-500/50 from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700'>
               <h3 className="text-white text-2xl mb-4">Hola!</h3>
               <p>
               Soy {''}
@@ -116,7 +115,7 @@ function App() {
               </div>
             </div>
 
-            <div className='lg:col-span-12 border-2 rounded-lg p-5'>
+            <div className='lg:col-span-12 p-5 bg-blue-900/30 bg-gradient-to-br hover:shadow-cyan-500/50 from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700'>
               <Slider className='slider-container' {...settings}>
                 <div>
                   <CardTech imgSrc={angularLogo} title='Angular' />
@@ -151,45 +150,83 @@ function App() {
         
       </div>
 
-      <div className='container mx-auto mt-8 grid grid-cols-1 font-mono'>
-
-        <h3 className="text-white text-2xl mb-4 text-center">Habilidades</h3>
+      <div className="container mx-auto mt-12 px-4 text-center font-mono max-w-4xl">
+        <h3 className="text-white text-3xl mb-10 font-semibold relative inline-block mx-auto">
+          <span className="relative z-10 px-4">Habilidades</span>
+          <span className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-400 to-green-400 rounded-full"></span>
+        </h3>
         
-        <div className='container grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 text-white'>
-          <div className='border-2 rounded-lg p-5'>
-            <p className='text-center text-2xl'>Tecnicas</p>
-            <ul>
-              <li>Angular</li>
-              <li>NextJs</li>
-              <li>TypeScript</li>
-              <li>MongoDB</li>
-              <li>NestJs</li>
-              <li>GraphQL</li>
-              <li>CSS</li>
-              <li>Firebase</li>
-              <li>Tailwind</li>
-            </ul>
-          </div>
-          <div className='border-2 rounded-lg p-5'>
-            <p className='text-center text-2xl'>Blandas</p>
-            <ul>
-              <li>Trabajo en equipo</li>
-              <li>Resolucion de problemas</li>
-              <li>Adaptabilidad</li>
-              <li>Comunicación</li>
-              <li>Creatividad</li>
-              <li>Empatia</li>
-              <li>Responsabilidad</li>
-              <li>Proactividad</li>
-              <li>Autogestion</li>
-            </ul>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
+          <div className="border border-gray-700 rounded-xl p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group">
+            <div className="flex items-center justify-center gap-3 mb-7">
+              <div className="p-2 bg-blue-900/30 rounded-lg group-hover:bg-blue-900/50 transition-all">
+                <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                </svg>
+              </div>
+              <p className="text-2xl text-blue-400 font-medium">Técnicas</p>
+            </div>
+            
+            <div className="grid grid-cols-2 gap-4 text-start">
+              {[
+                { name: "Angular", level: "90%" },
+                { name: "Next.js", level: "85%" },
+                { name: "TypeScript", level: "95%" },
+                { name: "MongoDB", level: "80%" },
+                { name: "NestJS", level: "75%" },
+                { name: "GraphQL", level: "70%" },
+                { name: "CSS", level: "90%" },
+                { name: "Firebase", level: "85%" },
+                { name: "Tailwind", level: "95%" }
+              ].map((skill, index) => (
+                <div key={index} className="space-y-1">
+                  <span className="text-white/90">{skill.name}</span>
+                  <div className="w-full bg-gray-700 rounded-full h-1.5">
+                    <div 
+                      className="bg-blue-400 h-1.5 rounded-full" 
+                      style={{ width: skill.level }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="border border-gray-700 rounded-xl p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group">
+            <div className="flex items-center justify-center gap-3 mb-7">
+              <div className="p-2 bg-green-900/30 rounded-lg group-hover:bg-green-900/50 transition-all">
+                <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                </svg>
+              </div>
+              <p className="text-2xl text-green-400 font-medium">Blandas</p>
+            </div>
+            
+            <div className="space-y-4">
+              {[
+                "Trabajo en equipo",
+                "Resolución de problemas",
+                "Adaptabilidad",
+                "Comunicación efectiva",
+                "Creatividad",
+                "Empatía",
+                "Responsabilidad",
+                "Proactividad",
+                "Autogestión"
+              ].map((skill, index) => (
+                <div key={index} className="flex items-start gap-3 hover:translate-x-1 transition-transform">
+                  <div className="flex-shrink-0 mt-1.5 w-2 h-2 rounded-full bg-green-400"></div>
+                  <span className="text-white/90">{skill}</span>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
 
       <div className='container mx-auto mt-8 font-mono'>
-        <h3 className="text-white text-2xl mb-4 text-center">Trabajos y proyectos</h3>
+        <h3 className="text-white text-2xl mb-4 text-center mt-10">Trabajos y proyectos</h3>
         <p className='text-white text-center mx-auto'>
           Mira algunos de mis proyectos de practicas personales y algunos sitios en donde he trabajado, <br />
           proyectos realizados en mi tiempo libre y algunos proyectos profesionales. <br />
@@ -198,7 +235,7 @@ function App() {
         <Grid container justifyContent='center'>
           {
             projectData.map((project, index) => (
-              <Grid item xs={10} sm={5} md={4} lg={3} xl={3} key={index}>
+              <Grid item xs={12} sm={5} md={4} lg={3} xl={3} key={index}>
                 <Card
                   imgSrc={project.img} 
                   title={project.title} 

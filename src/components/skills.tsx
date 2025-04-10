@@ -24,29 +24,24 @@ export const Skills: React.FC = () => {
             <p className="text-2xl text-blue-400 font-medium"> { lang.tech } </p>
           </div>
           
-          <div className="grid grid-cols-2 gap-4 text-start">
+            <div className="grid grid-cols-2 gap-4 text-start">
             {[
-              { name: "Angular", level: "50%" },
-              { name: "Next.js", level: "75%" },
-              { name: "TypeScript", level: "75%" },
-              { name: "MongoDB", level: "60%" },
-              { name: "NestJS", level: "65%" },
-              { name: "GraphQL", level: "70%" },
-              { name: "CSS", level: "70%" },
-              { name: "Firebase", level: "65%" },
-              { name: "Tailwind", level: "45%" }
+              { name: "Angular", level: "Semi" },
+              { name: "Next.js", level: "Semi" },
+              { name: "TypeScript", level: "Senior" },
+              { name: "MongoDB", level: "Semi" },
+              { name: "NestJS", level: "Semi" },
+              { name: "GraphQL", level: "Semi" },
+              { name: "CSS", level: "Semi" },
+              { name: "Firebase", level: "Semi" },
+              { name: "Tailwind", level: "Junior" }
             ].map((skill, index) => (
-              <div key={index} className="space-y-1">
-                <span className="text-white/90">{skill.name}</span>
-                <div className="w-full bg-gray-700 rounded-full h-1.5">
-                  <div 
-                    className="bg-blue-400 h-1.5 rounded-full" 
-                    style={{ width: skill.level }}
-                  ></div>
-                </div>
+              <div key={index} className="space-y-1 hover:translate-x-1 transition-transform">
+                <span className="text-white/90">{skill.name}: </span>
+                <span className="text-gray-400">{skill.level}</span>
               </div>
             ))}
-          </div>
+            </div>
         </div>
 
         <div className="border border-gray-700 rounded-xl p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group">

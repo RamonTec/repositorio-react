@@ -5,6 +5,7 @@ import CoursePage from './pages/course';
 import ProjectsPage from './pages/projects';
 import { LanguageProvider } from './utils/LanguageContext';
 import Footer from './components/footer';
+import ContactForm from './components/contactForm';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
+          <ContactForm />
           <Footer />
         </div>
       </Router>

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+
 
 export interface ICardProjectsProps {
   title: string;
@@ -30,7 +30,6 @@ export const CardProjects: React.FC<ICardProjectsProps> = ({
       )}
       
       <div className="flex flex-col gap-6">
-        {/* Header with icon and title */}
         <div className="flex flex-col md:flex-row md:items-center gap-4">
           {imageUrl ? (
             <div className="flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border border-gray-700">
@@ -42,7 +41,7 @@ export const CardProjects: React.FC<ICardProjectsProps> = ({
             </div>
           ) : (
             <div className="p-3 bg-blue-900/30 rounded-lg group-hover:bg-blue-900/50 transition-all w-12 h-12 flex items-center justify-center">
-              {/* Modern Code Icon */}
+              
               <svg className="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
@@ -80,12 +79,10 @@ export const CardProjects: React.FC<ICardProjectsProps> = ({
           </div>
         </div>
         
-        {/* Description */}
         {description && (
           <p className="text-white/80 mt-2">{description}</p>
         )}
         
-        {/* Skills */}
         {skills.length > 0 && (
           <div className="mt-4">
             <h5 className="text-sm font-medium text-white/70 mb-2">Built with:</h5>

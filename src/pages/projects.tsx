@@ -1,6 +1,5 @@
 
-import { courseData, projectsData } from '../dataType';
-import { Course } from '../components/course';
+import { projectsData } from '../dataType';
 import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../utils/LanguageContext';
@@ -23,13 +22,15 @@ export default function ProjectsPage() {
         <Title title={lang.projects} />
         <p className='text-white mt-5'>{lang.projectDescription}</p>
         {
-          projectsData.map((edc, index) => ((
+          projectsData.map((pro, index) => ((
             <CardProjects 
               key={index}
-              title={edc.title}  
-              url={edc.link} 
-              description={edc.description}
-              skills={edc.skills}
+              title={pro.title}  
+              url={pro.link} 
+              description={pro.description}
+              skills={pro.skills}
+              githubUrl={pro.githubUrl}
+              isFeatured={pro.isFeatured}
             />
           )))
         }

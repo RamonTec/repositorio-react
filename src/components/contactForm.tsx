@@ -25,7 +25,7 @@ const ContactForm = () => {
     try {
       const resend = new Resend(process.env.REACT_APP_RESEND_API_KEY);
       
-      const { data, error } = await resend.emails.send({
+      const { error } = await resend.emails.send({
         from: 'Contact Form <onboarding@resend.dev>',
         to: 'eestrabao46@gmail.com',
         subject: `New message from ${formData.name}`,

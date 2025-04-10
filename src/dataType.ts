@@ -15,10 +15,6 @@ import krakenLogo from './assets/kraken.png';
 // @ts-ignore
 import nuxtjsLogo from './assets/nuxtjs.png';
 // @ts-ignore
-import forochatsLogo from './assets/forochatsLogo.svg';
-// @ts-ignore
-import tasaLogo from './assets/tasaLogo.svg';
-// @ts-ignore
 import fanflexLogo from './assets/fanFlex.png';
 // @ts-ignore
 import manifestorLogo from './assets/logoManifestor.png';
@@ -446,4 +442,12 @@ export const projectsData = [
     skills: ['React', 'Material Ui', 'TypeScript'],
     link: 'https://urano-jets.vercel.app/'
   },
+  {
+    title: 'Elias Estrabao',
+    description: 'Portafolio Web',
+    skills: ['React', 'TailwindCss', 'TypeScript'],
+    link: 'https://repositorio-react-seven.vercel.app/',
+    githubUrl: 'https://github.com/RamonTec/repositorio-react',
+    isFeatured: true,
+  }
 ]

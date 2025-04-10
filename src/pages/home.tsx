@@ -93,44 +93,65 @@ export default function Home() {
   
 
   return (
-    <div className="p-2">
+    <div>
 
-      <div className='container mx-auto mt-8 grid grid-cols-1 sm:grid-cols-10 md:grid-cols-1 lg:grid-cols-11 font-mono gap-8 '>
-
-        <div className='xs:col-span-1 p-2 sm:col-span-12 lg:col-span-3 flex flex-col items-center justify-center bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700'>
-          <img className="hover:shadow-cyan-500/50 shadow-lg rounded-full w-60 h-60 mb-4 md:mb-0" src={eliasDev} alt='elias dev' />
-          <p className="text-white font-bold text-xl mb-2 mt-5">Elias Estrabao</p>
-          <AnimatedTitleList titles={titles} delay={2000} />
-          <p className="text-white text-justify">
-            { lang.makingYourIdeas }
-          </p>
-        </div>
-
-        <div className="xs:col-span-12 sm:col-span-12 lg:col-span-8 flex flex-col justify-start text-white text-3xl ">
-          
-          <div className='container mx-auto grid grid-cols-1 gap-4'>
-            
-            <div className='lg:col-span-12 p-5 text-base sm:text-justify bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700'>
-              <h3 className="text-white text-2xl mb-4"> { lang.welcome } </h3>
-              <p>
-              { lang.iM } {''}
-                <span className="underline decoration-indigo-500">Elias Estrabao</span>{' '} { lang.a } {''}
-                <span className="underline decoration-indigo-500">{ lang.aboutMe },</span>{  ' '}
-                {' '}<span> {lang.creatingSystems}</span>
-                {' '}<span className="underline decoration-indigo-500">precision</span>{''} {lang.inEach}
-                {' '}<span className="underline decoration-indigo-500">{lang.line}</span>
-              </p>
-              
-              <div className='mt-10 flex justify-center sm:justify-start'>
-                <button onClick={downloadCV} className='bg-white text-black rounded-lg text-xl p-2'> { lang.download } </button>
-              </div>
+      <div className="container mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 font-mono">
+        
+        <div className="lg:col-span-4 flex flex-col items-center p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all rounded-xl border-2 border-gray-700 shadow-lg group">
+          <div className="relative mb-6">
+            <img 
+              className="w-48 h-48 rounded-full object-cover border-4 border-gray-600 group-hover:border-cyan-400 transition-all shadow-lg group-hover:shadow-cyan-500/40"
+              src={eliasDev} 
+              alt="Elias Estrabao - Software Developer" 
+            />
+            <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-gray-800 px-4 py-1 rounded-full border border-gray-600">
+              <AnimatedTitleList 
+                titles={titles} 
+                delay={2000} 
+              />
             </div>
-
-
           </div>
 
+          <h1 className="text-2xl font-bold text-white mb-2 text-center">Elias Estrabao</h1>
+          
+          <p className="text-gray-300 text-center mb-6">
+            {lang.makingYourIdeas}
+          </p>
+          
         </div>
-        
+
+        <div className="lg:col-span-8 flex flex-col">
+          <div className="p-8 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all rounded-xl border-2 border-gray-700 shadow-lg">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              {lang.welcome}
+            </h2>
+            
+            <p className="text-gray-300 text-lg leading-relaxed mb-6">
+              {lang.iM}{' '}
+              <span className="text-cyan-400 font-semibold">Elias Estrabao</span>{' '}
+              {lang.a}{' '}
+              <span className="text-cyan-400 font-semibold">{lang.aboutMe}</span>,{' '}
+              {lang.creatingSystems}{' '}
+              <span className="text-cyan-400 font-semibold">precision</span>{' '}
+              {lang.inEach}{' '}
+              <span className="text-cyan-400 font-semibold">{lang.line}</span>
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mt-8">
+              <button 
+                onClick={downloadCV}
+                className="px-6 py-3 bg-cyan-600 hover:bg-cyan-500 text-white font-medium rounded-lg transition-all shadow-md hover:shadow-cyan-500/30 flex items-center justify-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                {lang.download}
+              </button>
+              
+            </div>
+          </div>
+      
+        </div>
       </div>
 
       <Skills />

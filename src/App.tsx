@@ -11,7 +11,7 @@ function App() {
   return (
     <LanguageProvider>
       <Router>
-        <div className="p-2">
+        <div>
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -19,7 +19,9 @@ function App() {
             <Route path="/projects" element={<ProjectsPage />} />
             <Route path="*" element={<Home />} />
           </Routes>
-          <ContactForm />
+          <div className='p-2'>
+            <ContactForm />
+          </div>
           <Footer />
         </div>
       </Router>

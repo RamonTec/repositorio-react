@@ -62,7 +62,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="m-10 max-w-md mx-auto p-6 border border-gray-700 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/70">
+    <div className="m-10 max-w-md mx-auto p-6  border border-gray-700 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/70">
       <h2 className="text-2xl font-bold text-blue-400 mb-6 text-center">{lang.contactMe}</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4">

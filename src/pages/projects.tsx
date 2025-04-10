@@ -17,7 +17,7 @@ export default function ProjectsPage() {
   }, []);
 
   return (
-    <div className="p-2">
+    <div>
       <div className="container mx-auto mt-16 px-4 text-center font-mono max-w-4xl">
         <Title title={lang.projects} />
         <p className='text-white mt-5'>{lang.projectDescription}</p>

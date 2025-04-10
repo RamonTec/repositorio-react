@@ -32,7 +32,7 @@ const AnimatedTitleList = ({ titles, delay = 3000 }:AnimatedTitleListProps) => {
 
   return (
     <animated.div style={springs}>
-      <p className='mx-auto text-center text-2xl font-bold text-gray-800 dark:text-white'>
+      <p className='mx-auto text-cyan-400 text-sm font-medium'>
         {titles[currentIndex]}
       </p>
     </animated.div>

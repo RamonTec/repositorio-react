@@ -422,7 +422,8 @@ export const projectsData = [
     title: 'Youtube Clone',
     description: 'Proyecto de practica, clon inicial de Youtube',
     skills: ['TailwindCss', 'React'],
-    link: 'https://youtube-test-orpin.vercel.app/'
+    link: 'https://youtube-test-orpin.vercel.app/',
+    githubUrl: 'https://github.com/RamonTec/youtube-test',
   },
   {
     title: 'Practicas Promedios digitales',
@@ -434,7 +435,8 @@ export const projectsData = [
     title: 'Todo machine',
     description: 'Proyecto de practica con React',
     skills: ['React', 'HTML', 'CSS'],
-    link: 'https://todos-machine.vercel.app/'
+    link: 'https://todos-machine.vercel.app/',
+    githubUrl: 'https://github.com/RamonTec/todo-machine/tree/master'
   },
   {
     title: 'Urano Jets',
@@ -449,5 +451,13 @@ export const projectsData = [
     link: 'https://repositorio-react-seven.vercel.app/',
     githubUrl: 'https://github.com/RamonTec/repositorio-react',
     isFeatured: true,
+  },
+  {
+    title: 'Camera Test',
+    description: 'Prueba tecnica para el uso de la camara en react native',
+    skills: ['React', 'React Native', 'TypeScript'],
+    link: 'https://github.com/RamonTec/cameratest',
+    githubUrl: 'https://github.com/RamonTec/cameratest',
+    isFeatured: false,
   }
 ]

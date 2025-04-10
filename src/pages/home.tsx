@@ -22,7 +22,7 @@ import firebase from '../assets/firebaseLogo.png';
 
 import AnimatedTitleList from '../components/AnimatedTitleList';
 import { pdfBase64 } from '../const';
-import { courseData, useEducationData, experienceData, projectsData } from '../dataType';
+import { useCoursesData, useEducationData, experienceData, projectsData } from '../dataType';
 import { Experience } from '../components/experience';
 import { Education } from '../components/education';
 import { Course } from '../components/course';
@@ -122,35 +122,10 @@ export default function Home() {
               </p>
               
               <div className='mt-10 flex justify-center sm:justify-start'>
-                <button onClick={downloadCV} className='bg-white text-black rounded-lg text-xl p-2'>Descargar CV</button>
+                <button onClick={downloadCV} className='bg-white text-black rounded-lg text-xl p-2'> { lang.download } </button>
               </div>
             </div>
 
-            <div className='lg:col-span-12 p-5 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700'>
-              <Slider className='slider-container' {...settings}>
-                <div>
-                  <CardTech imgSrc={angularLogo} title='Angular' />
-                </div>
-                <div>
-                  <CardTech imgSrc={nextjsLogo} title='NextJs' />
-                </div>
-                <div>
-                  <CardTech imgSrc={typescript} title='TypeScript' />
-                </div>
-                <div>
-                  <CardTech imgSrc={nestjs} title='NestJs' />
-                </div>
-                <div>
-                  <CardTech imgSrc={graphqlLogo} title='GraphQl' />
-                </div>
-                <div>
-                  <CardTech imgSrc={css} title='Css' />
-                </div>
-                <div>
-                  <CardTech imgSrc={firebase} title='Firebases' />
-                </div>
-              </Slider>
-            </div>
 
           </div>
 
@@ -201,9 +176,8 @@ export default function Home() {
         <Title title={lang.courses} />
         
         <Course 
-          title={courseData[0].title}  
-          fromTo={courseData[0].fromTo} 
-          description={courseData[0].description}
+          title={useCoursesData()[0].title}  
+          fromTo={useCoursesData()[0].fromTo} 
         />
 
         <Link to='/courses'>

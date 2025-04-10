@@ -43,6 +43,76 @@ export const translations = {
     projects: 'Projects',
     projectDescription: 'Here are some of my personal projects, where you can see my skills and knowledge acquired in software development.',
     viewMoreProjects: 'View more completed projects',
+    download: 'Download CV',
+    contact: 'Contact',
+    contactMe: 'Contact Me',
+    form: {
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      send: 'Send',
+      sending: 'Sending...',
+      alertMessage: 'The message has been sent successfully.',
+      alertError: 'Error sending the message. Please try again.',
+    },
+    coursesTitles: {
+      course1: {
+        title: 'English Audio Course for Using Prepositions',
+        fromTo: 'January - 2025',
+      },
+      course2: {
+        title: 'Audio Course of English for Travel',
+        fromTo: 'January - 2025',
+      },
+      course3: {
+        title: 'Basic English Vocabulary and Expressions Course',
+        fromTo: 'March - 2025',
+      },
+      course4: {
+        title: 'Backend Course with Node.js: REST API with Express.js',
+        fromTo: 'March - 2022',
+      },
+      course5: {
+        title: 'Frontend Developer Course',
+        fromTo: 'Abril - 2023',
+      },
+      course6: {
+        title: 'Basic English Course A1 for Beginners',
+        fromTo: 'March - 2025',
+      },
+      course7: {
+        title: 'Basic English Course A1: Simple Present and Common Vocabulary (2021)',
+        fromTo: 'March - 2025',
+      },
+      course8: {
+        title: 'Basic English Course A2: Connectors and Articles',
+        fromTo: 'March - 2025',
+      },
+      course9: {
+        title: 'Basic English Course A2: Common Questions and Answers',
+        fromTo: 'February - 2025',
+      },
+      course10: {
+        title: 'Practical English Course on Work Elements',
+        fromTo: 'March - 2024',
+      },
+      course11: {
+        title: 'Practical English Course on Family Members',
+        fromTo: 'March - 2024',
+      },
+      course12: {
+        title: 'TypeScript Course',
+        fromTo: 'March - 2025',
+      },
+      course13: {
+        title: 'TypeScript Course: Object-Oriented Programming and Asynchrony',
+        fromTo: 'March - 2025',
+      },
+      course14: {
+        title: 'TypeScript Course: Advanced Types and Functions',
+        fromTo: 'February - 2025',
+      },
+    }
   },
   es: {
     english: 'Inglés',
@@ -85,6 +155,75 @@ export const translations = {
     projects: 'Proyectos',
     projectDescription: 'Aqui algunos de mis proyectos personales realizados, donde puedes ver mis habilidades y conocimientos adquiridos en el desarrollo de software.',
     viewMoreProjects: 'Ver más proyectos realizados',
-
+    download: 'Descargar CV',
+    contact: 'Contacto',
+    contactMe: 'Contáctame',
+    form: {
+      name: 'Nombre',
+      email: 'Correo electrónico',
+      message: 'Mensaje',
+      send: 'Enviar',
+      sending: 'Enviando...',
+      alertMessage: 'El mensaje ha sido enviado correctamente.',
+      alertError: 'Error al enviar el mensaje. Por favor, inténtalo de nuevo.',
+    },
+    coursesTitles: {
+      course1: {
+        title: 'Curso de Audio en Inglés para Usar Preposiciones',
+        fromTo: 'Enero - 2025',
+      },
+      course2: {
+        title: 'Curso de Audio en Inglés para Viajar',
+        fromTo: 'Enero - 2025',
+      },
+      course3: {
+        title: 'Curso de Vocabulario y Expresiones Básicas en Inglés',
+        fromTo: 'Marzo - 2025',
+      },
+      course4: {
+        title: 'Curso de Backend con Node.js: API REST con Express.js',
+        fromTo: 'Marzo - 2022',
+      },
+      course5: {
+        title: 'Curso de Frontend Developer',
+        fromTo: 'Abril - 2023',
+      },
+      course6: {
+        title: 'Curso Básico de Inglés A1 para Principiantes',
+        fromTo: 'Marzo - 2025',
+      },
+      course7: {
+        title: 'Curso Básico de Inglés A1: Presente Simple y Vocabulario Común (2021)',
+        fromTo: 'Marzo - 2025',
+      },
+      course8: {
+        title: 'Curso Básico de Inglés A2: Conectores y Artículos',
+        fromTo: 'Marzo - 2025',
+      },
+      course9: {
+        title: 'Curso Básico de Inglés A2: Preguntas y Respuestas Comunes',
+        fromTo: 'Febrero - 2025',
+      },
+      course10: {
+        title: 'Curso Práctico de Inglés sobre Elementos de Trabajo',
+        fromTo: 'Marzo - 2024',
+      },
+      course11: {
+        title: 'Curso Práctico de Inglés sobre Miembros de la Familia',
+        fromTo: 'Marzo - 2024',
+      },
+      course12: {
+        title: 'Curso de TypeScript',
+        fromTo: 'Marzo - 2025',
+      },
+      course13: {
+        title: 'Curso de TypeScript: Programación Orientada a Objetos y Asincronía',
+        fromTo: 'Marzo - 2025',
+      },
+      course14: {
+        title: 'Curso de TypeScript: Tipos y Funciones Avanzadas',
+        fromTo: 'Febrero - 2025',
+      },
+    }
   },
 };

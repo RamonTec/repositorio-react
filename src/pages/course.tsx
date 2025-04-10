@@ -1,5 +1,5 @@
 
-import { courseData } from '../dataType';
+import { useCoursesData } from '../dataType';
 import { Course } from '../components/course';
 import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
@@ -21,12 +21,11 @@ export default function CoursePage() {
       <div className="container mx-auto mt-16 px-4 text-center font-mono max-w-4xl">
         <Title title={lang.courses} />
         {
-          courseData.map((edc, index) => ((
+          useCoursesData().map((edc, index) => ((
             <Course 
               key={index}
               title={edc.title}  
               fromTo={edc.fromTo} 
-              description={edc.description}
             />
           )))
         }

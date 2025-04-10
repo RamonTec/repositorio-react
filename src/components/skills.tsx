@@ -24,21 +24,21 @@ export const Skills: React.FC = () => {
             <p className="text-2xl text-blue-400 font-medium"> { lang.tech } </p>
           </div>
           
-            <div className="grid grid-cols-2 gap-4 text-start">
+            <div className="grid grid-cols-1 gap-4 text-start">
             {[
-              { name: "Angular", level: "Semi" },
-              { name: "Next.js", level: "Semi" },
-              { name: "TypeScript", level: "Senior" },
-              { name: "MongoDB", level: "Semi" },
-              { name: "NestJS", level: "Semi" },
-              { name: "GraphQL", level: "Semi" },
-              { name: "CSS", level: "Semi" },
-              { name: "Firebase", level: "Semi" },
-              { name: "Tailwind", level: "Junior" }
+              { name: "Angular"},
+              { name: "Next.js"},
+              { name: "TypeScript" },
+              { name: "MongoDB" },
+              { name: "NestJS" },
+              { name: "GraphQL" },
+              { name: "CSS" },
+              { name: "Firebase" },
+              { name: "Tailwind" }
             ].map((skill, index) => (
-              <div key={index} className="space-y-1 hover:translate-x-1 transition-transform">
-                <span className="text-white/90">{skill.name}: </span>
-                <span className="text-gray-400">{skill.level}</span>
+              <div key={index} className="flex items-start gap-3 hover:translate-x-1 transition-transform">
+                <div className="flex-shrink-0 mt-1.5 w-2 h-2 rounded-full bg-blue-400"></div>
+                <span className="text-white/90">{skill.name}</span>
               </div>
             ))}
             </div>

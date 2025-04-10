@@ -1,8 +1,14 @@
 import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { Resend } from 'resend';
+import { useLanguage } from "../utils/LanguageContext";
+import { translations } from "./translations";
 
 const ContactForm = () => {
+
+  const { language } = useLanguage();
+  const lang = translations[language];
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -44,24 +50,25 @@ const ContactForm = () => {
 
       if (error) throw error;
 
-      toast.success('Message sent successfully!');
+      toast.success(lang.form.alertMessage);
       setFormData({ name: '', email: '', message: '' });
-    } catch (error) {
-      toast.error('Failed to send message. Please try again.');
-      console.error('Error:', error);
-    } finally {
       setIsLoading(false);
-    }
+    } catch (error) {
+      setIsLoading(false);
+
+      toast.error(lang.form.alertError);
+      console.error('Error:', error);
+    } 
   };
 
   return (
     <div className="m-10 max-w-md mx-auto p-6 border border-gray-700 rounded-xl bg-gradient-to-br from-gray-800/50 to-gray-900/70">
-      <h2 className="text-2xl font-bold text-blue-400 mb-6 text-center">Contact Me</h2>
+      <h2 className="text-2xl font-bold text-blue-400 mb-6 text-center">{lang.contactMe}</h2>
       
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-white/80 mb-1">
-            Name
+            {lang.form.name}
           </label>
           <input
             type="text"
@@ -76,7 +83,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-white/80 mb-1">
-            Email
+          {lang.form.email}
           </label>
           <input
             type="email"
@@ -91,7 +98,7 @@ const ContactForm = () => {
 
         <div>
           <label htmlFor="message" className="block text-sm font-medium text-white/80 mb-1">
-            Message
+          {lang.form.message}
           </label>
           <textarea
             id="message"
@@ -119,10 +126,10 @@ const ContactForm = () => {
                 <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                 <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
               </svg>
-              Sending...
+              {lang.form.sending}
             </>
           ) : (
-            'Send Message'
+            lang.form.send
           )}
         </button>
       </form>

@@ -1,10 +1,9 @@
 export interface ICoruseProps {
   title?: string;
   fromTo?: string;
-  description?: string;
 }
 
-export const Course: React.FC<ICoruseProps> = ({ description, fromTo, title }) => {
+export const Course: React.FC<ICoruseProps> = ({ fromTo, title }) => {
   return (
     <div className="text-start border mt-5 border-gray-700 rounded-xl p-6 bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group">
       <div className="flex flex-col md:flex-row md:items-center gap-4">

@@ -338,78 +338,80 @@ export const useEducationData = () => {
   ];
 };
 
-export const courseData = [
-  {
-    title: 'Audio Curso de Inglés para el Uso de Preposiciones',
-    fromTo: 'Enero - 2025',
-    description: 'Descubre el uso adecuado de preposiciones comunes en inglés como "in", "on", "at" y practica con ejercicios de audio para mejorar tu comprensión. Aprende sobre preposiciones de tiempo, lugar, movimiento y dirección en inglés y utiliza frases preposicionales con diversas combinaciones de verbos.'
-  },
-  {
-    title: 'Audio Curso de Inglés para Viajes',
-    fromTo: 'Enero - 2025',
-    description: 'Aprende Inglés para viajes y comunícate con confianza en tus próximas vacaciones o viajes de negocio. Adquiere vocabulario para establecer conversaciones en aeropuertos, hoteles y restaurantes; y practica el uso de expresiones comunes a la hora de viajar. Desarrolla tus habilidades de escucha con este audio curso.'
-  },
-  {
-    title: 'Curso Básico de Vocabulario y Expresiones en Inglés',
-    fromTo: 'Marzo - 2025',
-    description: 'Aprende vocabulario relacionado con viajes, hoteles, reservas, restaurantes, compras y situaciones médicas básicas. Practica estructuras gramaticales sencillas del presente, pasado y futuro en estos contextos y adquiere expresiones de uso común para dar mayor naturalidad a tus conversaciones.'
-  },
-  {
-    title: 'Curso de Backend con Node.js: API REST con Express.js',
-    fromTo: 'Marzo - 2022',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de Frontend Developer',
-    fromTo: 'Abril - 2023',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de Inglés Básico A1 para Principiantes',
-    fromTo: 'Marzo - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de Inglés Básico A1: Presente Simple y Vocabulario Común (2021)',
-    fromTo: 'Marzo - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de Inglés Básico A2: Conectores y Artículos',
-    fromTo: 'Marzo - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de Inglés Básico A2: Preguntas y Respuestas Comunes',
-    fromTo: 'Febrero - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de Inglés Práctico sobre Elementos de Trabajo',
-    fromTo: 'Marzo - 2024',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de Inglés Práctico sobre los Miembros de la Familia',
-    fromTo: 'Marzo - 2024',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de TypeScript',
-    fromTo: 'Enero - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de TypeScript: Programación Orientada a Objetos y Asincronismo',
-    fromTo: 'Marzo - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-  {
-    title: 'Curso de TypeScript: Tipos Avanzados y Funciones',
-    fromTo: 'Febrero - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  },
-];
+export const useCoursesData = () => {
+  const languageData = useLanguageData();
+  return [
+    {
+      title: languageData.coursesTitles.course1.title,
+      fromTo: languageData.coursesTitles.course1.fromTo,
+    },
+    {
+      title: languageData.coursesTitles.course2.title,
+      fromTo: languageData.coursesTitles.course2.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course3.title,
+      fromTo: languageData.coursesTitles.course3.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course4.title,
+      fromTo: languageData.coursesTitles.course4.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course5.title,
+      fromTo: languageData.coursesTitles.course5.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course6.title,
+      fromTo: languageData.coursesTitles.course6.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course7.title,
+      fromTo: languageData.coursesTitles.course7.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course8.title,
+      fromTo: languageData.coursesTitles.course8.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course9.title,
+      fromTo: languageData.coursesTitles.course9.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course10.title,
+      fromTo: languageData.coursesTitles.course10.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course11.title,
+      fromTo: languageData.coursesTitles.course11.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course12.title,
+      fromTo: languageData.coursesTitles.course12.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course13.title,
+      fromTo: languageData.coursesTitles.course13.fromTo,
+      
+    },
+    {
+      title: languageData.coursesTitles.course14.title,
+      fromTo: languageData.coursesTitles.course14.fromTo,
+      
+    },
+  ];
+}
 
 export const projectsData = [
   {

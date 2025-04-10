@@ -22,7 +22,7 @@ import firebase from '../assets/firebaseLogo.png';
 
 import AnimatedTitleList from '../components/AnimatedTitleList';
 import { pdfBase64 } from '../const';
-import { courseData, useEducationData, experienceData } from '../dataType';
+import { courseData, useEducationData, experienceData, projectsData } from '../dataType';
 import { Experience } from '../components/experience';
 import { Education } from '../components/education';
 import { Course } from '../components/course';
@@ -31,13 +31,14 @@ import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../utils/LanguageContext';
 import { translations } from '../components/translations';
-import { Key } from 'react';
+import { useEffect } from 'react';
+import { CardProjects } from '../components/cardProjects';
 
 export default function Home() {
   const { language } = useLanguage();
   const lang = translations[language];
   
-  const titles = ['Frontend', 'Scrum master', 'Backend', 'Fullstack'];
+  const titles = [lang.javascript, lang.frontend, lang.backend, lang.fullstack];
 
   const settings = {
     dots: false,
@@ -85,6 +86,10 @@ export default function Home() {
     link.click();
     document.body.removeChild(link);
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   
 
   return (
@@ -204,6 +209,27 @@ export default function Home() {
         <Link to='/courses'>
           <p className='text-white/80 mt-5 text-sm cursor-pointer hover:text-amber-400'>
             {lang.viewMoreCourses}
+          </p>
+        </Link>
+        
+
+      </div>
+
+      <div className="container mx-auto mt-16 px-4 text-center font-mono max-w-4xl">
+
+        <Title title={lang.projects} />
+        <p className='text-white mt-5'>{lang.projectDescription}</p>
+        
+        <CardProjects 
+          title={projectsData[0].title}  
+          url={projectsData[0].link} 
+          description={projectsData[0].description}
+          skills={projectsData[0].skills}
+        />
+
+        <Link to='/projects'>
+          <p className='text-white/80 mt-5 text-sm cursor-pointer hover:text-amber-400'>
+            {lang.viewMoreProjects}
           </p>
         </Link>
         

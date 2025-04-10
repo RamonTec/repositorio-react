@@ -413,4 +413,37 @@ export const courseData = [
     fromTo: 'Febrero - 2025',
     description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
   },
+];
+
+export const projectsData = [
+  {
+    title: 'Orion Studios',
+    description: 'Empresa de desarrollo de software en Venezuela',
+    skills: ['VueJS', 'Quasar'],
+    link: 'https://orion-studios-ramontec.vercel.app/#/'
+  },
+  {
+    title: 'Youtube Clone',
+    description: 'Proyecto de practica, clon inicial de Youtube',
+    skills: ['TailwindCss', 'React'],
+    link: 'https://youtube-test-orpin.vercel.app/'
+  },
+  {
+    title: 'Practicas Promedios digitales',
+    description: 'Proyecto de practica',
+    skills: ['Vue', 'Quasar'],
+    link: 'https://promedios.vercel.app/#/'
+  },
+  {
+    title: 'Todo machine',
+    description: 'Proyecto de practica con React',
+    skills: ['React', 'HTML', 'CSS'],
+    link: 'https://todos-machine.vercel.app/'
+  },
+  {
+    title: 'Urano Jets',
+    description: 'Proyecto Freelance',
+    skills: ['React', 'Material Ui', 'TypeScript'],
+    link: 'https://urano-jets.vercel.app/'
+  },
 ]

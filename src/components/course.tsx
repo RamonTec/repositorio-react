@@ -18,7 +18,6 @@ export const Course: React.FC<ICoruseProps> = ({ description, fromTo, title }) =
         <div>
           <h4 className="text-xl text-amber-400 font-medium">{title}</h4>
           <p className="text-white/80">{fromTo}</p>
-          <p className="text-white/80 mt-2">{description}</p>
         </div>
       </div>
     </div>

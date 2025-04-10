@@ -22,16 +22,21 @@ import firebase from '../assets/firebaseLogo.png';
 
 import AnimatedTitleList from '../components/AnimatedTitleList';
 import { pdfBase64 } from '../const';
-import { courseData, educationdata, experienceData } from '../dataType';
+import { courseData, useEducationData, experienceData } from '../dataType';
 import { Experience } from '../components/experience';
 import { Education } from '../components/education';
 import { Course } from '../components/course';
 import { Skills } from '../components/skills';
 import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '../utils/LanguageContext';
+import { translations } from '../components/translations';
+import { Key } from 'react';
 
 export default function Home() {
-
+  const { language } = useLanguage();
+  const lang = translations[language];
+  
   const titles = ['Frontend', 'Scrum master', 'Backend', 'Fullstack'];
 
   const settings = {
@@ -92,7 +97,7 @@ export default function Home() {
           <p className="text-white font-bold text-xl mb-2 mt-5">Elias Estrabao</p>
           <AnimatedTitleList titles={titles} delay={2000} />
           <p className="text-white text-justify">
-            Haciendo tus ideas realidad.
+            { lang.makingYourIdeas }
           </p>
         </div>
 
@@ -101,14 +106,14 @@ export default function Home() {
           <div className='container mx-auto grid grid-cols-1 gap-4'>
             
             <div className='lg:col-span-12 p-5 text-base sm:text-justify bg-gradient-to-br from-gray-800/50 to-gray-900/70 hover:from-gray-800/70 hover:to-gray-900/80 transition-all group shadow-lg rounded-lg overflow-hidden border-2 border-gray-700'>
-              <h3 className="text-white text-2xl mb-4">Hola!</h3>
+              <h3 className="text-white text-2xl mb-4"> { lang.welcome } </h3>
               <p>
-              Soy {''}
-                <span className="underline decoration-indigo-500">Elias Estrabao</span>{' '}un {''}
-                <span className="underline decoration-indigo-500">desarrollador de software.</span>{''}
-                {' '}<span>Creando sistemas a medida con</span>
-                {' '}<span className="underline decoration-indigo-500">precision</span>{''} en cada
-                {' '}<span className="underline decoration-indigo-500">linea de codigo</span>
+              { lang.iM } {''}
+                <span className="underline decoration-indigo-500">Elias Estrabao</span>{' '} { lang.a } {''}
+                <span className="underline decoration-indigo-500">{ lang.aboutMe },</span>{  ' '}
+                {' '}<span> {lang.creatingSystems}</span>
+                {' '}<span className="underline decoration-indigo-500">precision</span>{''} {lang.inEach}
+                {' '}<span className="underline decoration-indigo-500">{lang.line}</span>
               </p>
               
               <div className='mt-10 flex justify-center sm:justify-start'>
@@ -152,7 +157,7 @@ export default function Home() {
     
       <div className="container mx-auto mt-16 px-4 text-center font-mono max-w-4xl">
 
-        <Title title='Experiencia'/>
+        <Title title={ lang.experience } />
 
         {
           experienceData.map((exp, index) => ((
@@ -169,10 +174,11 @@ export default function Home() {
 
       <div className="container mx-auto mt-16 px-4 text-center font-mono max-w-4xl">
 
-        <Title title='Educacion'/>
+        <Title title={lang.education} />
         
         {
-          educationdata.map((edc, index) => ((
+
+          useEducationData().map((edc: { title: string; fromTo: string; description: string; }, index: number) => ((
             <Education 
               key={index}
               title={edc.title}  
@@ -180,13 +186,14 @@ export default function Home() {
               description={edc.description}
             />
           )))
+
         }
 
       </div>
 
       <div className="container mx-auto mt-16 px-4 text-center font-mono max-w-4xl">
 
-        <Title title='Cursos'/>
+        <Title title={lang.courses} />
         
         <Course 
           title={courseData[0].title}  
@@ -196,7 +203,7 @@ export default function Home() {
 
         <Link to='/courses'>
           <p className='text-white/80 mt-5 text-sm cursor-pointer hover:text-amber-400'>
-            Ver mas cursos realizados
+            {lang.viewMoreCourses}
           </p>
         </Link>
         

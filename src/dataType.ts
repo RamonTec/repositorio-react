@@ -66,6 +66,13 @@ import nestjs from './assets/nestjs.png';
 import redux from './assets/reduxLogo.png';
 // @ts-ignore
 import jest from './assets/jest.png';
+import { useLanguage } from './utils/LanguageContext';
+import { translations } from './components/translations';
+
+export const useLanguageData = () => {
+  const { language } = useLanguage();
+  return translations[language];
+};
 
 
 export const ownProjectsData = [
@@ -324,29 +331,32 @@ export const experienceData = [
   },
 ]
 
-export const educationdata = [
-  {
-    title: 'TSU en Informatica',
-    fromTo: '2020 - 2023',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
-  }
-]
+export const useEducationData = () => {
+  const languageData = useLanguageData();
+  return [
+    {
+      title: 'TSU en Informatica',
+      fromTo: '2020 - 2023',
+      description: languageData.descriptionStudiesTsu
+    }
+  ];
+};
 
 export const courseData = [
   {
     title: 'Audio Curso de Inglés para el Uso de Preposiciones',
     fromTo: 'Enero - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+    description: 'Descubre el uso adecuado de preposiciones comunes en inglés como "in", "on", "at" y practica con ejercicios de audio para mejorar tu comprensión. Aprende sobre preposiciones de tiempo, lugar, movimiento y dirección en inglés y utiliza frases preposicionales con diversas combinaciones de verbos.'
   },
   {
     title: 'Audio Curso de Inglés para Viajes',
     fromTo: 'Enero - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+    description: 'Aprende Inglés para viajes y comunícate con confianza en tus próximas vacaciones o viajes de negocio. Adquiere vocabulario para establecer conversaciones en aeropuertos, hoteles y restaurantes; y practica el uso de expresiones comunes a la hora de viajar. Desarrolla tus habilidades de escucha con este audio curso.'
   },
   {
     title: 'Curso Básico de Vocabulario y Expresiones en Inglés',
     fromTo: 'Marzo - 2025',
-    description: 'Bases de fundamentos en desarrollo de sistemas, analisis y diseño de sistemas, programacion orientada a objetos, bases de datos y redes de computadoras'
+    description: 'Aprende vocabulario relacionado con viajes, hoteles, reservas, restaurantes, compras y situaciones médicas básicas. Practica estructuras gramaticales sencillas del presente, pasado y futuro en estos contextos y adquiere expresiones de uso común para dar mayor naturalidad a tus conversaciones.'
   },
   {
     title: 'Curso de Backend con Node.js: API REST con Express.js',

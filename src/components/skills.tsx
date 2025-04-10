@@ -1,11 +1,16 @@
 import React from "react";
 import { Title } from "./title";
+import { useLanguage } from "../utils/LanguageContext";
+import { translations } from "./translations";
 
 export const Skills: React.FC = () => {
+  const { language } = useLanguage();
+  const lang = translations[language];
+  
   return (
     <div className="container mx-auto mt-12 px-4 text-center font-mono max-w-4xl">
       
-      <Title title='Habilidades'/>
+      <Title title={ lang.skills } />
       
       <div className="grid grid-cols-1 mt-10 md:grid-cols-2 gap-8">
         
@@ -16,7 +21,7 @@ export const Skills: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
               </svg>
             </div>
-            <p className="text-2xl text-blue-400 font-medium">Técnicas</p>
+            <p className="text-2xl text-blue-400 font-medium"> { lang.tech } </p>
           </div>
           
           <div className="grid grid-cols-2 gap-4 text-start">
@@ -51,20 +56,21 @@ export const Skills: React.FC = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
               </svg>
             </div>
-            <p className="text-2xl text-green-400 font-medium">Blandas</p>
+            <p className="text-2xl text-green-400 font-medium"> { lang.soft } </p>
           </div>
           
           <div className="space-y-4">
             {[
-              "Trabajo en equipo",
-              "Resolución de problemas",
-              "Adaptabilidad",
-              "Comunicación efectiva",
-              "Creatividad",
-              "Empatía",
-              "Responsabilidad",
-              "Proactividad",
-              "Autogestión"
+              lang.teamwork,
+              lang.proactivity,
+              lang.communication,
+              lang.adaptability,
+              lang.problemSolving,
+              lang.creativity,
+              lang.empathy,
+              lang.responsibility,
+              lang.timeManagement,
+              lang.criticalThinking
             ].map((skill, index) => (
               <div key={index} className="flex items-start gap-3 hover:translate-x-1 transition-transform">
                 <div className="flex-shrink-0 mt-1.5 w-2 h-2 rounded-full bg-green-400"></div>

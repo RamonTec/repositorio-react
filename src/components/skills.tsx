@@ -1,7 +1,7 @@
 import React from "react";
 import { Title } from "./title";
 import { useLanguage } from "../utils/LanguageContext";
-import { translations } from "./translations";
+import { translations } from "../utils/translations";
 
 export const Skills: React.FC = () => {
   const { language } = useLanguage();

@@ -5,7 +5,7 @@ import eliasDev from '../assets/eliasDev.png';
 
 import AnimatedTitleList from '../components/AnimatedTitleList';
 import { pdfBase64 } from '../const';
-import { useCoursesData, useEducationData, usePrjectdata, useExperienceData } from '../dataType';
+import { useCoursesData, useEducationData, usePrjectdata, useExperienceData } from '../utils/dataType';
 import { Experience } from '../components/experience';
 import { Education } from '../components/education';
 import { Course } from '../components/course';
@@ -13,7 +13,7 @@ import { Skills } from '../components/skills';
 import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../utils/LanguageContext';
-import { translations } from '../components/translations';
+import { translations } from '../utils/translations';
 import { useEffect } from 'react';
 import { CardProjects } from '../components/cardProjects';
 

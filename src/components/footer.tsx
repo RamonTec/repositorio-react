@@ -1,4 +1,4 @@
-import { translations } from './translations';
+import { translations } from '../utils/translations';
 import { useLanguage } from '../utils/LanguageContext';
 
 function Footer() {

@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { toast } from 'react-hot-toast';
 import { Resend } from 'resend';
 import { useLanguage } from "../utils/LanguageContext";
-import { translations } from "./translations";
+import { translations } from "../utils/translations";
 
 const ContactForm = () => {
 

@@ -1,9 +1,9 @@
 
-import { usePrjectdata } from '../dataType';
+import { usePrjectdata } from '../utils/dataType';
 import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../utils/LanguageContext';
-import { translations } from '../components/translations';
+import { translations } from '../utils/translations';
 import { useEffect } from 'react';
 import { CardProjects } from '../components/cardProjects';
 

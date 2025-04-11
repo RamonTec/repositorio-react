@@ -1,5 +1,5 @@
 import { useLanguage } from "../utils/LanguageContext";
-import { translations } from "./translations";
+import { translations } from "../utils/translations";
 
 
 export interface ICardProjectsProps {

@@ -62,8 +62,8 @@ import nestjs from './assets/nestjs.png';
 import redux from './assets/reduxLogo.png';
 // @ts-ignore
 import jest from './assets/jest.png';
-import { useLanguage } from './utils/LanguageContext';
-import { translations } from './components/translations';
+import { useLanguage } from './LanguageContext';
+import { translations } from './translations';
 
 export const useLanguageData = () => {
   const { language } = useLanguage();
@@ -456,14 +456,6 @@ export const usePrjectdata = () => {
       skills: languageData.freeProjects.projectUrano.skills,
       description: languageData.freeProjects.projectUrano.description,
       link: languageData.freeProjects.projectUrano.link,
-    },
-    {
-      title: languageData.freeProjects.repoElias.title,
-      skills: languageData.freeProjects.repoElias.skills,
-      description: languageData.freeProjects.repoElias.description,
-      link: languageData.freeProjects.repoElias.link,
-      githubUrl: languageData.freeProjects.repoElias.githubUrl,
-      isFeatured: languageData.freeProjects.repoElias.isFeatured,
     },
     {
       title: languageData.freeProjects.projectCameraTest.title,

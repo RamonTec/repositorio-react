@@ -1,10 +1,10 @@
 
-import { useCoursesData } from '../dataType';
+import { useCoursesData } from '../utils/dataType';
 import { Course } from '../components/course';
 import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../utils/LanguageContext';
-import { translations } from '../components/translations';
+import { translations } from '../utils/translations';
 import { useEffect } from 'react';
 
 export default function CoursePage() {

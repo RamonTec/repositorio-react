@@ -112,7 +112,131 @@ export const translations = {
         title: 'TypeScript Course: Advanced Types and Functions',
         fromTo: 'February - 2025',
       },
+    },
+    workExperience: {
+      qsDigtial: {
+        "siteName": "QS digital",
+        "fromTo": "2024 - Present",
+        "roles": [
+          {
+            "title": "Frontend Developer",
+            "description": "Web application development with React, Angular, bootstrap, Next.js y TypeScript"
+          },
+          {
+            "title": "Scrum Master",
+            "description": "Facilitation of agile ceremonies and process improvement"
+          }
+        ]
+      },
+      krakenTech: {
+        "siteName": "Kraken Tech Studios",
+        "fromTo": "2023 - 2023",
+        "roles": [
+          {
+            "title": "Frontend Developer",
+            "description": "Web application development with React, Next.js, TypeScript, and MUI"
+          }
+        ]
+      },
+      cobuildLab: {
+        "siteName": "CobuilLab",
+        "fromTo": "2022 - 2023",
+        "roles": [
+          {
+            "title": "Frontend Developer",
+            "description": "Web application development with React, Next.js, and TypeScript, API integration, and mobile application development with React Native"
+          },
+          {
+            "title": "Backend Developer",
+            "description": "GraphQL API development and relational database modeling"
+          }
+        ]
+      },
+      orinocoDev: {
+        "siteName": "Orinco Dev",
+        "fromTo": "2019 - 2022",
+        "roles": [
+          {
+            "title": "Frontend Developer",
+            "description": "Web application development with Vue, Quasar, API integration, and responsive website development"
+          },
+          {
+            "title": "Backend Developer",
+            "description": "GraphQL API development and database modeling with MongoDB, integration of services like AWS S3, EC2, and SNS"
+          }
+        ]
+      }
+    },
+    freeProjects: {
+      projectOrion: {
+        title: "Orion Studios",
+        description: "Software development company in Venezuela",
+        isFeatured: 'false',
+        skills: ["VueJS", "Quasar"],
+        link: "https://orion-studios-ramontec.vercel.app/#/"
+      },
+      projectYoutube: {
+        title: "Youtube Clone",
+        description: "Practice project, initial Youtube clone",
+        isFeatured: 'false',
+        skills: ["TailwindCss", "React"],
+        link: "https://youtube-test-orpin.vercel.app/",
+        githubUrl: "https://github.com/RamonTec/youtube-test"
+      },
+      projectPromedios: {
+        title: "Digital Averages Practices",
+        isFeatured: 'false',
+        description: "Practice project",
+        skills: ["Vue", "Quasar"],
+        link: "https://promedios.vercel.app/#/" 
+      },
+      projectTodoMachine: {
+        title: "Todo Machine",
+        description: "Practice project with React",
+        skills: ["React", "HTML", "CSS"],
+        isFeatured: 'false',
+        link: "https://todos-machine.vercel.app/",
+        githubUrl: "https://github.com/RamonTec/todo-machine/tree/master"
+      },
+      projectUrano: {
+        title: "Urano Jets",
+        description: "Freelance project",
+        isFeatured: 'false',
+        skills: ["React", "Material Ui", "TypeScript"],
+        link: "https://urano-jets.vercel.app/",
+      },
+      repoElias: {
+        title: "Elias Estrabao",
+        description: "Web Portfolio",
+        skills: ["React", "TailwindCss", "TypeScript"],
+        link: "https://repositorio-react-seven.vercel.app/",
+        githubUrl: "https://github.com/RamonTec/repositorio-react",
+        isFeatured: 'true'
+      },
+      projectCameraTest: {
+        title: "Camera Test",
+        description: "Technical test for camera usage in React Native",
+        skills: ["React", "React Native", "TypeScript"],
+        link: "https://github.com/RamonTec/cameratest",
+        githubUrl: "https://github.com/RamonTec/cameratest",
+        isFeatured: 'false'
+      },
+      projectRuleta: {
+        title: "Roulette",
+        description: "Practice project, roulette game",
+        skills: ["React", "Vite", "TypeScript", "TailwindCss", "Canva Confetti"],
+        link: "https://ruleta-two.vercel.app/",
+        githubUrl: "https://github.com/RamonTec/ruleta",
+        isFeatured: 'true'
+      }
+    },
+    cardProjecttitles: {
+      liveDemo: 'Live Demo',
+      build: 'Technology used',
+      code: 'Source code',
+      featured: 'Featured',
     }
+
   },
   es: {
     english: 'Inglés',
@@ -224,6 +348,129 @@ export const translations = {
         title: 'Curso de TypeScript: Tipos y Funciones Avanzadas',
         fromTo: 'Febrero - 2025',
       },
+    },
+    workExperience: {
+      qsDigtial: {
+        "siteName": "QS digital",
+        "fromTo": "2024 - Presente",
+        "roles": [
+          {
+            "title": "Desarrollador Frontend",
+            "description": "Desarrollo de aplicaciones web con React, Angular, bootstrap, Next.js y TypeScript"
+          },
+          {
+            "title": "Scrum Master",
+            "description": "Facilitación de ceremonias ágiles y mejora de procesos"
+          }
+        ]
+      },
+      krakenTech: {
+        "siteName": "Kraken Tech Studios",
+        "fromTo": "2023 - 2023",
+        "roles": [
+          {
+            "title": "Desarrollador Frontend",
+            "description": "Desarrollo de aplicaciones web con React, Next.js, TypeScript y MUI"
+          }
+        ]
+      },
+      cobuildLab: {
+        "siteName": "CobuilLab",
+        "fromTo": "2022 - 2023",
+        "roles": [
+          {
+            "title": "Desarrollador Frontend",
+            "description": "Desarrollo de aplicaciones web con React, Next.js y TypeScript, integración de API y desarrollo de aplicaciones móviles con React Native"
+          },
+          {
+            "title": "Desarrollador Backend",
+            "description": "Desarrollo de API GraphQL y modelado de bases de datos relacionales"
+          }
+        ]
+      },
+      orinocoDev: {
+        "siteName": "Orinco Dev",
+        "fromTo": "2019 - 2022",
+        "roles": [
+          {
+            "title": "Desarrollador Frontend",
+            "description": "Desarrollo de aplicaciones web con Vue, Quasar, integración de API y desarrollo de sitios web responsivos"
+          },
+          {
+            "title": "Desarrollador Backend",
+            "description": "Desarrollo de API GraphQL y modelado de bases de datos con MongoDB, integración de servicios como AWS S3, EC2 y SNS"
+          }
+        ]
+      }
+    },
+    freeProjects: {
+      projectOrion: {
+        title: "Orion Studios",
+        description: "Empresa de desarrollo de software en Venezuela",
+        isFeatured: 'false',
+        skills: ["VueJS", "Quasar"],
+        link: "https://orion-studios-ramontec.vercel.app/#/",
+      },
+      projectYoutube: {
+        "title": "Youtube Clone",
+        "description": "Proyecto de práctica, clon inicial de Youtube",
+        isFeatured: 'false',
+        "skills": ["TailwindCss", "React"],
+        "link": "https://youtube-test-orpin.vercel.app/",
+        "githubUrl": "https://github.com/RamonTec/youtube-test"
+      },
+      projectPromedios: {
+        title: "Prácticas Promedios Digitales",
+        description: "Proyecto de práctica",
+        isFeatured: 'false',
+        skills: ["Vue", "Quasar"],
+        link: "https://promedios.vercel.app/#/",    
+      },
+      projectTodoMachine: {
+        title: "Todo Machine",
+        description: "Proyecto de práctica con React",
+        isFeatured: 'false',
+        skills: ["React", "HTML", "CSS"],
+        link: "https://todos-machine.vercel.app/",
+        githubUrl: "https://github.com/RamonTec/todo-machine/tree/master"
+      },
+      projectUrano: {
+        title: "Urano Jets",
+        isFeatured: 'false',
+        description: "Proyecto Freelance",
+        skills: ["React", "Material Ui", "TypeScript"],
+        link: "https://urano-jets.vercel.app/"
+      },
+      repoElias: {
+        title: "Elias Estrabao",
+        description: "Portafolio Web",
+        skills: ["React", "TailwindCss", "TypeScript"],
+        link: "https://repositorio-react-seven.vercel.app/",
+        githubUrl: "https://github.com/RamonTec/repositorio-react",
+        isFeatured: 'true'
+      },
+      projectCameraTest: {
+        title: "Camera Test",
+        description: "Prueba técnica para el uso de la cámara en React Native",
+        skills: ["React", "React Native", "TypeScript"],
+        link: "https://github.com/RamonTec/cameratest",
+        githubUrl: "https://github.com/RamonTec/cameratest",
+        isFeatured: 'false'
+      },
+      projectRuleta: {
+        title: "Ruleta",
+        description: "Proyecto de práctica, juego de ruleta",
+        skills: ["React", "Vite", "TypeScript", "TailwindCss", "Canva Confetti"],
+        link: "https://ruleta-two.vercel.app/",
+        githubUrl: "https://github.com/RamonTec/ruleta",
+        isFeatured: 'true'
+      }
+    },
+    cardProjecttitles: {
+      liveDemo: 'Demo en vivo',
+      build: 'Tecnología utilizada',
+      code: 'Código fuente',
+      featured: 'Destacado',
     }
   },
 };

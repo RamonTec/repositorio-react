@@ -1,28 +1,11 @@
 
-import CardTech from '../components/CardTech';
-// @ts-ignore
-import eliasDev from '../assets/eliasDev.png';
-import Slider from "react-slick";
-// @ts-ignore
-// @ts-ignore
-import css from '../assets/css-3.svg';
-// @ts-ignore
-import angularLogo from '../assets/angular.png';
-// @ts-ignore
-import graphqlLogo from '../assets/graphql-logo.png';
-// @ts-ignore
-import nextjsLogo from '../assets/nextjsLogo.png';
 
 // @ts-ignore
-import typescript from '../assets/typescript.png';
-// @ts-ignore
-import nestjs from '../assets/nestjs.png';
-// @ts-ignore
-import firebase from '../assets/firebaseLogo.png';
+import eliasDev from '../assets/eliasDev.png';
 
 import AnimatedTitleList from '../components/AnimatedTitleList';
 import { pdfBase64 } from '../const';
-import { useCoursesData, useEducationData, experienceData, projectsData } from '../dataType';
+import { useCoursesData, useEducationData, usePrjectdata, useExperienceData } from '../dataType';
 import { Experience } from '../components/experience';
 import { Education } from '../components/education';
 import { Course } from '../components/course';
@@ -39,44 +22,6 @@ export default function Home() {
   const lang = translations[language];
   
   const titles = [lang.javascript, lang.frontend, lang.backend, lang.fullstack];
-
-  const settings = {
-    dots: false,
-    arrows: false,
-    infinite: true,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    autoplay: true,
-    centerMode: true,
-    speed: 3000,
-    autoplaySpeed: 3000,
-    cssEase: "linear",
-    responsive: [
-      
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-        }
-      },
-      {
-        breakpoint: 320,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      },
-      
-    ]
-  };
 
   const downloadCV = (): void => {
     const link = document.createElement('a');
@@ -129,7 +74,7 @@ export default function Home() {
             <p className="text-gray-300 text-lg leading-relaxed mb-6">
               {lang.iM}{' '}
               <span className="text-cyan-400 font-semibold">Elias Estrabao</span>{' '}
-              {lang.a}{' '}
+              {' '}
               <span className="text-cyan-400 font-semibold">{lang.aboutMe}</span>,{' '}
               {lang.creatingSystems}{' '}
               <span className="text-cyan-400 font-semibold">precision</span>{' '}
@@ -161,7 +106,7 @@ export default function Home() {
         <Title title={ lang.experience } />
 
         {
-          experienceData.map((exp, index) => ((
+          useExperienceData().map((exp, index) => ((
             <Experience 
               key={index}
               siteName={exp.siteName}
@@ -216,10 +161,10 @@ export default function Home() {
         <p className='text-white mt-5'>{lang.projectDescription}</p>
         
         <CardProjects 
-          title={projectsData[0].title}  
-          url={projectsData[0].link} 
-          description={projectsData[0].description}
-          skills={projectsData[0].skills}
+          title={usePrjectdata()[0].title}  
+          url={usePrjectdata()[0].link} 
+          description={usePrjectdata()[0].description}
+          skills={usePrjectdata()[0].skills}
         />
 
         <Link to='/projects'>

@@ -272,60 +272,63 @@ export const techData = [
   },
 ]
 
-export const experienceData = [
-  {
-    siteName: 'QS digital',
-    fromTo: '2024 - Presente',
-    roles: [
-      {
-        title: 'Frontend Developer',
-        description: 'Desarrollo de aplicaciones web con React, Next.js y TypeScript'
-      },
-      {
-        title: 'Scrum Master',
-        description: 'Facilitación de ceremonias ágiles y mejora de procesos'
-      }
-    ]
-  },
-  {
-    siteName: 'Kraken Tech Studios',
-    fromTo: '2023 - 2023',
-    roles: [
-      {
-        title: 'Frontend Developer',
-        description: 'Desarrollo de aplicaciones web con React, Next.js, TypeScript y MUI'
-      },
-    ]
-  },
-  {
-    siteName: 'CobuilLab',
-    fromTo: '2022 - 2023',
-    roles: [
-      {
-        title: 'Frontend Developer',
-        description: 'Desarrollo de aplicaciones web con React, Next.js y TypeScript, integración de APIs y desarrollo de aplicaciones móviles con React Native'
-      },
-      {
-        title: 'Backend Developer',
-        description: 'Desarrollo de API Graphql y modelado de base de datos relacionales'
-      },
-    ]
-  },
-  {
-    siteName: 'Orinco Dev',
-    fromTo: '2019 - 2022',
-    roles: [
-      {
-        title: 'Frontend Developer',
-        description: 'Desarrollo de aplicaciones web con Vue, Quasar, integración de APIs y desarrollo de sitios web responsive'
-      },
-      {
-        title: 'Backend Developer',
-        description: 'Desarrollo de API Graphql y modelado de base de datos con MongoDB, integracion de servicios como S3, Ec2 y SNS de AWS'
-      },
-    ]
-  },
-]
+export const useExperienceData = () => {
+  const languageData = useLanguageData();
+  return [
+    {
+      siteName: languageData.workExperience.qsDigtial.siteName,
+      fromTo: languageData.workExperience.qsDigtial.fromTo,
+      roles: [
+        {
+          title: languageData.workExperience.qsDigtial.roles[0].title,
+          description: languageData.workExperience.qsDigtial.roles[0].description,
+        },
+        {
+          title: languageData.workExperience.qsDigtial.roles[1].title,
+          description: languageData.workExperience.qsDigtial.roles[1].description,
+        }
+      ]
+    },
+    {
+      siteName: languageData.workExperience.krakenTech.siteName,
+      fromTo: languageData.workExperience.krakenTech.fromTo,
+      roles: [
+        {
+          title: languageData.workExperience.krakenTech.roles[0].title,
+          description: languageData.workExperience.krakenTech.roles[0].description,
+        },
+      ]
+    },
+    {
+      siteName: languageData.workExperience.cobuildLab.siteName,
+      fromTo: languageData.workExperience.cobuildLab.fromTo,
+      roles: [
+        {
+          title: languageData.workExperience.cobuildLab.roles[0].title,
+          description: languageData.workExperience.cobuildLab.roles[0].description,
+        },
+        {
+          title: languageData.workExperience.cobuildLab.roles[1].title,
+          description: languageData.workExperience.cobuildLab.roles[1].description,
+        },
+      ]
+    },
+    {
+      siteName: languageData.workExperience.orinocoDev.siteName,
+      fromTo: languageData.workExperience.orinocoDev.fromTo,
+      roles: [
+        {
+          title: languageData.workExperience.orinocoDev.roles[0].title,
+          description: languageData.workExperience.orinocoDev.roles[0].description,
+        },
+        {
+          title: languageData.workExperience.orinocoDev.roles[1].title,
+          description: languageData.workExperience.orinocoDev.roles[1].description,
+        },
+      ]
+    },
+  ];
+};
 
 export const useEducationData = () => {
   const languageData = useLanguageData();
@@ -413,61 +416,70 @@ export const useCoursesData = () => {
   ];
 }
 
-export const projectsData = [
-  {
-    title: 'Orion Studios',
-    description: 'Empresa de desarrollo de software en Venezuela',
-    skills: ['VueJS', 'Quasar'],
-    link: 'https://orion-studios-ramontec.vercel.app/#/'
-  },
-  {
-    title: 'Youtube Clone',
-    description: 'Proyecto de practica, clon inicial de Youtube',
-    skills: ['TailwindCss', 'React'],
-    link: 'https://youtube-test-orpin.vercel.app/',
-    githubUrl: 'https://github.com/RamonTec/youtube-test',
-  },
-  {
-    title: 'Practicas Promedios digitales',
-    description: 'Proyecto de practica',
-    skills: ['Vue', 'Quasar'],
-    link: 'https://promedios.vercel.app/#/'
-  },
-  {
-    title: 'Todo machine',
-    description: 'Proyecto de practica con React',
-    skills: ['React', 'HTML', 'CSS'],
-    link: 'https://todos-machine.vercel.app/',
-    githubUrl: 'https://github.com/RamonTec/todo-machine/tree/master'
-  },
-  {
-    title: 'Urano Jets',
-    description: 'Proyecto Freelance',
-    skills: ['React', 'Material Ui', 'TypeScript'],
-    link: 'https://urano-jets.vercel.app/'
-  },
-  {
-    title: 'Elias Estrabao',
-    description: 'Portafolio Web',
-    skills: ['React', 'TailwindCss', 'TypeScript'],
-    link: 'https://repositorio-react-seven.vercel.app/',
-    githubUrl: 'https://github.com/RamonTec/repositorio-react',
-    isFeatured: true,
-  },
-  {
-    title: 'Camera Test',
-    description: 'Prueba tecnica para el uso de la camara en react native',
-    skills: ['React', 'React Native', 'TypeScript'],
-    link: 'https://github.com/RamonTec/cameratest',
-    githubUrl: 'https://github.com/RamonTec/cameratest',
-    isFeatured: false,
-  },
-  {
-    title: 'Ruleta',
-    description: 'Proyecto de practica, juego de ruleta',
-    skills: ['React', 'Vite', 'TypeScript', 'TailwindCss', 'Canva Confetti'],
-    link: 'https://ruleta-two.vercel.app/',
-    githubUrl: 'https://github.com/RamonTec/ruleta',
-    isFeatured: true,
-  }
-]
+export const usePrjectdata = () => {
+  const languageData = useLanguageData();
+  return [
+    {
+      title: languageData.freeProjects.projectOrion.title,
+      skills: languageData.freeProjects.projectOrion.skills,
+      description: languageData.freeProjects.projectOrion.description,
+      link: languageData.freeProjects.projectOrion.link,
+    },
+    {
+      title: languageData.freeProjects.projectYoutube.title,
+      skills: languageData.freeProjects.projectYoutube.skills,
+      description: languageData.freeProjects.projectYoutube.description,
+      link: languageData.freeProjects.projectYoutube.link,
+    },
+    {
+      title: languageData.freeProjects.projectPromedios.title,
+      skills: languageData.freeProjects.projectPromedios.skills,
+      description: languageData.freeProjects.projectPromedios.description,
+      link: languageData.freeProjects.projectPromedios.link,
+    },
+    {
+      title: languageData.freeProjects.projectTodoMachine.title,
+      skills: languageData.freeProjects.projectTodoMachine.skills,
+      description: languageData.freeProjects.projectTodoMachine.description,
+      link: languageData.freeProjects.projectTodoMachine.link,
+      githubUrl: languageData.freeProjects.projectTodoMachine.githubUrl,
+    },
+    {
+      title: languageData.freeProjects.projectTodoMachine.title,
+      skills: languageData.freeProjects.projectTodoMachine.skills,
+      description: languageData.freeProjects.projectTodoMachine.description,
+      link: languageData.freeProjects.projectTodoMachine.link,
+      githubUrl: languageData.freeProjects.projectTodoMachine.githubUrl,
+    },
+    {
+      title: languageData.freeProjects.projectUrano.title,
+      skills: languageData.freeProjects.projectUrano.skills,
+      description: languageData.freeProjects.projectUrano.description,
+      link: languageData.freeProjects.projectUrano.link,
+    },
+    {
+      title: languageData.freeProjects.repoElias.title,
+      skills: languageData.freeProjects.repoElias.skills,
+      description: languageData.freeProjects.repoElias.description,
+      link: languageData.freeProjects.repoElias.link,
+      githubUrl: languageData.freeProjects.repoElias.githubUrl,
+      isFeatured: languageData.freeProjects.repoElias.isFeatured,
+    },
+    {
+      title: languageData.freeProjects.projectCameraTest.title,
+      skills: languageData.freeProjects.projectCameraTest.skills,
+      description: languageData.freeProjects.projectCameraTest.description,
+      link: languageData.freeProjects.projectCameraTest.link,
+      githubUrl: languageData.freeProjects.projectCameraTest.githubUrl,
+    },
+    {
+      title: languageData.freeProjects.projectRuleta.title,
+      skills: languageData.freeProjects.projectRuleta.skills,
+      description: languageData.freeProjects.projectRuleta.description,
+      link: languageData.freeProjects.projectRuleta.link,
+      githubUrl: languageData.freeProjects.projectRuleta.githubUrl,
+      isFeatured: languageData.freeProjects.projectRuleta.isFeatured,
+    }
+  ];
+}
+

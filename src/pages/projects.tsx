@@ -1,5 +1,5 @@
 
-import { projectsData } from '../dataType';
+import { usePrjectdata } from '../dataType';
 import { Title } from '../components/title';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../utils/LanguageContext';
@@ -22,7 +22,7 @@ export default function ProjectsPage() {
         <Title title={lang.projects} />
         <p className='text-white mt-5'>{lang.projectDescription}</p>
         {
-          projectsData.map((pro, index) => ((
+          usePrjectdata().map((pro, index) => ((
             <CardProjects 
               key={index}
               title={pro.title}  
@@ -30,7 +30,7 @@ export default function ProjectsPage() {
               description={pro.description}
               skills={pro.skills}
               githubUrl={pro.githubUrl}
-              isFeatured={pro.isFeatured}
+              isFeatured={pro.isFeatured === 'true' ? true : false}
             />
           )))
         }

@@ -461,5 +461,13 @@ export const projectsData = [
     link: 'https://github.com/RamonTec/cameratest',
     githubUrl: 'https://github.com/RamonTec/cameratest',
     isFeatured: false,
+  },
+  {
+    title: 'Ruleta',
+    description: 'Proyecto de practica, juego de ruleta',
+    skills: ['React', 'Vite', 'TypeScript', 'TailwindCss', 'Canva Confetti'],
+    link: 'https://ruleta-two.vercel.app/',
+    githubUrl: 'https://github.com/RamonTec/ruleta',
+    isFeatured: true,
   }
 ]

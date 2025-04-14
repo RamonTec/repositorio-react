@@ -228,6 +228,14 @@ export const translations = {
         link: "https://ruleta-two.vercel.app/",
         githubUrl: "https://github.com/RamonTec/ruleta",
         isFeatured: 'true'
+      },
+      arrayCourse: {
+        title: "Arrays Course",
+        description: "Practice project, arrays course",
+        skills: ["Javascript"],
+        link: "https://github.com/RamonTec/array-course/tree/main",
+        githubUrl: "https://github.com/RamonTec/array-course/tree/main",
+        isFeatured: 'true'
       }
     },
     cardProjecttitles: {
@@ -463,6 +471,14 @@ export const translations = {
         skills: ["React", "Vite", "TypeScript", "TailwindCss", "Canva Confetti"],
         link: "https://ruleta-two.vercel.app/",
         githubUrl: "https://github.com/RamonTec/ruleta",
+        isFeatured: 'true'
+      },
+      arrayCourse: {
+        title: "Curso de arrays",
+        description: "Proyecto de práctica, curso de arrays",
+        skills: ["Javascript"],
+        link: "https://github.com/RamonTec/array-course/tree/main",
+        githubUrl: "https://github.com/RamonTec/array-course/tree/main",
         isFeatured: 'true'
       }
     },

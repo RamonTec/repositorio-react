@@ -215,6 +215,14 @@ export const usePrjectdata = () => {
       isFeatured: languageData.freeProjects.arrayCourse.isFeatured,
       githubUrl: languageData.freeProjects.arrayCourse.githubUrl,
     },
+    {
+      title: languageData.freeProjects.apiSales.title,
+      skills: languageData.freeProjects.apiSales.skills,
+      description: languageData.freeProjects.apiSales.description,
+      link: languageData.freeProjects.apiSales.link,
+      isFeatured: languageData.freeProjects.apiSales.isFeatured,
+      githubUrl: languageData.freeProjects.apiSales.githubUrl,
+    },
   ];
 }
 

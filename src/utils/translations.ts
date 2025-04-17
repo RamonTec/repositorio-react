@@ -236,6 +236,14 @@ export const translations = {
         link: "https://github.com/RamonTec/array-course/tree/main",
         githubUrl: "https://github.com/RamonTec/array-course/tree/main",
         isFeatured: 'true'
+      },
+      apiSales: {
+        title: "Nestjs Project to practice",
+        description: "Creation of a REST API with Nestjs and MongoDB, for a virtual store",
+        skills: ["Nestjs", "MongoDB", "Typescript", 'API Rest'],
+        link: "https://github.com/RamonTec/api-sales",
+        githubUrl: "https://github.com/RamonTec/api-sales",
+        isFeatured: 'true'
       }
     },
     cardProjecttitles: {
@@ -479,6 +487,14 @@ export const translations = {
         skills: ["Javascript"],
         link: "https://github.com/RamonTec/array-course/tree/main",
         githubUrl: "https://github.com/RamonTec/array-course/tree/main",
+        isFeatured: 'true'
+      },
+      apiSales: {
+        title: "Pryecto de practica con Nestjs",
+        description: "Creacion de api rest con Nestjs y MongoDB, sobre tienda virtual",
+        skills: ["Nestjs", "MongoDB", "Typescript", 'API Rest'],
+        link: "https://github.com/RamonTec/api-sales",
+        githubUrl: "https://github.com/RamonTec/api-sales",
         isFeatured: 'true'
       }
     },

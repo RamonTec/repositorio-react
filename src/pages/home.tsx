@@ -26,7 +26,7 @@ export default function Home() {
   const downloadCV = (): void => {
     const link = document.createElement('a');
     link.href = `data:application/pdf;base64,${pdfBase64}`;
-    link.download = 'Your-Name-CV.pdf';
+    link.download = 'Elias Estrabao';
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

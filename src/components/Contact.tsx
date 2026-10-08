@@ -65,7 +65,7 @@ export default function Contact() {
 
         <div className="relative">
           <motion.p variants={reveal} className="mb-3 font-mono text-sm text-mint-400">
-            <span className="text-zinc-600">{'// '}</span>05 · contact
+            <span className="text-zinc-600">{'// '}</span>06 · contact
           </motion.p>
           <motion.h2 variants={reveal} className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
             {ui.contact.title}

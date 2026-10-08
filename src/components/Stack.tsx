@@ -6,41 +6,42 @@ import Section, { reveal } from './Section';
 export default function Stack() {
   const { t, ui } = useLanguage();
 
-  return (
-    <Section id="stack" index="03" title={ui.stack.title} lead={ui.stack.lead}>
-      <div className="grid gap-5 lg:grid-cols-3">
-        {stackGroups.map((group) => (
-          <motion.div
-            key={group.id}
-            className={`card p-6 ${group.id === 'frontend' ? 'lg:row-span-2' : ''}`}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: '-60px' }}
-            variants={{ show: { transition: { staggerChildren: 0.04 } } }}
+  const renderGroup = (group: (typeof stackGroups)[number]) => (
+    <motion.div
+      key={group.id}
+      className={`card p-6 ${group.id === 'frontend' ? 'lg:row-span-2' : ''}`}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: '-60px' }}
+      variants={{ show: { transition: { staggerChildren: 0.04 } } }}
+    >
+      <motion.h3 variants={reveal} className="mb-5 font-mono text-sm text-zinc-400">
+        <span className="text-mint-400">#</span> {t(group.title)}
+      </motion.h3>
+      <ul className="grid grid-cols-2 gap-2">
+        {group.items.map(({ name, icon: Icon, color }) => (
+          <motion.li
+            key={name}
+            variants={reveal}
+            className="group flex items-center gap-3 rounded-lg border border-transparent px-3 py-2.5 transition-colors hover:border-ink-700 hover:bg-ink-850"
           >
-            <motion.h3 variants={reveal} className="mb-5 font-mono text-sm text-zinc-400">
-              <span className="text-mint-400">#</span> {t(group.title)}
-            </motion.h3>
-            <ul className="grid grid-cols-2 gap-2">
-              {group.items.map(({ name, icon: Icon, color }) => (
-                <motion.li
-                  key={name}
-                  variants={reveal}
-                  className="group flex items-center gap-3 rounded-lg border border-transparent px-3 py-2.5 transition-colors hover:border-ink-700 hover:bg-ink-850"
-                >
-                  <Icon
-                    className="h-5 w-5 shrink-0 text-zinc-500 transition-all duration-300 group-hover:scale-110 group-hover:text-[var(--c)]"
-                    style={{ '--c': color } as React.CSSProperties}
-                  />
-                  <span className="text-sm text-zinc-300 group-hover:text-white">{name}</span>
-                </motion.li>
-              ))}
-            </ul>
-          </motion.div>
+            <Icon
+              className="h-5 w-5 shrink-0 text-zinc-500 transition-all duration-300 group-hover:scale-110 group-hover:text-[var(--c)]"
+              style={{ '--c': color } as React.CSSProperties}
+            />
+            <span className="text-sm text-zinc-300 group-hover:text-white">{name}</span>
+          </motion.li>
         ))}
+      </ul>
+    </motion.div>
+  );
 
+  return (
+    <Section id="stack" index="04" title={ui.stack.title} lead={ui.stack.lead}>
+      <div className="grid gap-5 lg:grid-cols-3">
+        {stackGroups.slice(0, 3).map(renderGroup)}
         <motion.div
-          className="card relative overflow-hidden p-6 lg:col-span-2"
+          className="card relative overflow-hidden p-6"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-60px' }}
@@ -65,6 +66,7 @@ export default function Stack() {
             ))}
           </ul>
         </motion.div>
+        {stackGroups.slice(3).map(renderGroup)}
       </div>
     </Section>
   );

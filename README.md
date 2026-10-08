@@ -22,7 +22,8 @@ Todo el contenido está en dos archivos:
   - `featured: true` en un proyecto lo muestra en grande en la sección principal.
 - `src/content/ui.ts` — textos de la interfaz en español e inglés.
 
-El CV se sirve desde `public/cv-elias-estrabao.pdf`; reemplaza ese archivo para actualizarlo.
+El CV se sirve según el idioma: `public/cv-elias-estrabao-es.pdf` y `public/cv-elias-estrabao-en.pdf`.
+Las métricas de la sección de resultados están en `impact` dentro de `src/content/data.ts`.
 
 ## Variables de entorno (Vercel)
 

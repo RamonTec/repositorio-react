@@ -22,7 +22,7 @@ export default function Education() {
   };
 
   return (
-    <Section id="education" index="04" title={ui.education.title} lead={ui.education.lead}>
+    <Section id="education" index="05" title={ui.education.title} lead={ui.education.lead}>
       <div className="grid gap-5 lg:grid-cols-[1fr_1.4fr]">
         <motion.div
           variants={reveal}

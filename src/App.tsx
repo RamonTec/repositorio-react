@@ -5,6 +5,7 @@ import Background from './components/Background';
 import ScrollProgress from './components/ScrollProgress';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
+import Impact from './components/Impact';
 import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Stack from './components/Stack';
@@ -33,6 +34,7 @@ export default function App() {
       <Nav />
       <main className="relative">
         <Hero />
+        <Impact />
         <Projects />
         <Experience />
         <Stack />

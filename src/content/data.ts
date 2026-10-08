@@ -1,24 +1,38 @@
 import type { IconType } from 'react-icons';
 import { FaAws } from 'react-icons/fa';
+import { TbApi, TbDog } from 'react-icons/tb';
 import {
   SiAngular,
-  SiBootstrap,
+  SiApachejmeter,
+  SiBinance,
+  SiCypress,
+  SiEslint,
   SiExpress,
   SiFirebase,
   SiGit,
   SiGraphql,
   SiJavascript,
+  SiJest,
+  SiLinux,
   SiMongodb,
   SiMui,
   SiNestjs,
   SiNextdotjs,
   SiNodedotjs,
+  SiOllama,
+  SiPostgresql,
+  SiPython,
   SiQuasar,
   SiReact,
+  SiReacthookform,
+  SiReactquery,
+  SiReacttable,
+  SiSupabase,
   SiTailwindcss,
   SiTypescript,
   SiVite,
   SiVuedotjs,
+  SiZod,
 } from 'react-icons/si';
 
 export type Lang = 'es' | 'en';
@@ -28,31 +42,178 @@ export type Text = Record<Lang, string>;
 
 export const profile = {
   name: 'Elias Estrabao',
-  /** Año en que empezó a trabajar profesionalmente (Orinoco Dev). */
-  careerStart: 2019,
   /** Muestra el indicador "Abierto a oportunidades" en el hero. */
   available: true,
-  email: 'elias.estrabao@gmail.com',
-  cv: '/cv-elias-estrabao.pdf',
+  email: 'eestrabao46@gmail.com',
+  cv: { es: '/cv-elias-estrabao-es.pdf', en: '/cv-elias-estrabao-en.pdf' } satisfies Text,
   avatar: '/avatar.webp',
   socials: {
     github: 'https://github.com/RamonTec',
-    linkedin: 'https://www.linkedin.com/in/elias-estrabao-1ba902140/',
+    linkedin: 'https://www.linkedin.com/in/el%C3%ADas-estrabao/',
     telegram: 'https://t.me/Ereq22',
     whatsapp: 'https://api.whatsapp.com/send?phone=584248850265',
   },
 };
 
-export const yearsOfExperience = new Date().getFullYear() - profile.careerStart;
+/* ───────────────────────── Experiencia ───────────────────────── */
+
+export interface Job {
+  company: string;
+  role: Text;
+  /** YYYY-MM */
+  from: string;
+  /** YYYY-MM; sin valor = trabajo actual */
+  to?: string;
+  /** Logros. Lo que va entre **asteriscos** se resalta como métrica. */
+  highlights: Text[];
+  stack: string[];
+}
+
+export const jobs: Job[] = [
+  {
+    company: 'QS Digital',
+    role: { es: 'Frontend Developer & Project Manager', en: 'Frontend Developer & Project Manager' },
+    from: '2024-02',
+    to: '2025-09',
+    highlights: [
+      {
+        es: 'Arquitecté y gestioné **monorepos con Angular 16 y Next.js** para aplicaciones enterprise, facilitando la escalabilidad y la organización modular del código.',
+        en: 'Architected and managed **Angular 16 and Next.js monorepos** for enterprise apps, enabling frontend scalability and a modular codebase.',
+      },
+      {
+        es: 'Optimicé la performance en React, **reduciendo los tiempos de carga un 30%** mediante optimización de renderizado y manejo eficiente del estado.',
+        en: 'Optimized React performance, **cutting load times by 30%** through render optimization and efficient state management.',
+      },
+      {
+        es: 'Implementé Husky + ESLint, **resolviendo más de 120 incidencias** antes del despliegue.',
+        en: 'Introduced Husky + ESLint, **fixing 120+ issues** before they reached deployment.',
+      },
+      {
+        es: 'Lideré code reviews y pair programming, **reduciendo defectos un 15%**.',
+        en: 'Led code reviews and pair programming, **reducing defects by 15%**.',
+      },
+      {
+        es: 'Dirigí la planificación ágil de sprints con **entregas quincenales consistentes** alineadas al negocio.',
+        en: 'Ran agile sprint planning, delivering **consistent bi-weekly releases** aligned with business goals.',
+      },
+    ],
+    stack: ['Angular 16', 'Next.js', 'React', 'TypeScript', 'Monorepo', 'Husky', 'ESLint', 'Scrum'],
+  },
+  {
+    company: 'Kraken Tech Studios',
+    role: { es: 'Frontend Developer', en: 'Frontend Developer' },
+    from: '2023-06',
+    to: '2023-09',
+    highlights: [
+      {
+        es: 'Implementé pagos en tiempo real (PSE / ePayco) sobre APIs REST, procesando **más de 500 transacciones diarias** de forma estable.',
+        en: 'Implemented real-time payments (PSE / ePayco) over REST APIs, reliably processing **500+ transactions per day**.',
+      },
+      {
+        es: 'Desarrollé **más de 15 componentes reutilizables** en Next.js y TypeScript, acelerando las entregas **~40%**.',
+        en: 'Built **15+ reusable components** in Next.js and TypeScript, speeding up delivery by **~40%**.',
+      },
+      {
+        es: 'Apliqué Tailwind CSS para dar consistencia visual y escalabilidad al design system.',
+        en: 'Used Tailwind CSS to bring visual consistency and scalability to the design system.',
+      },
+    ],
+    stack: ['Next.js', 'TypeScript', 'Tailwind', 'REST', 'PSE / ePayco'],
+  },
+  {
+    company: 'Cobuild Lab',
+    role: { es: 'Full Stack Developer', en: 'Full Stack Developer' },
+    from: '2022-03',
+    to: '2023-03',
+    highlights: [
+      {
+        es: 'Refactoricé código en React y React Native, mejorando la mantenibilidad y **reduciendo tiempos de carga hasta un 88%**.',
+        en: 'Refactored React and React Native code, improving maintainability and **cutting load times by up to 88%**.',
+      },
+      {
+        es: 'Rediseñé endpoints con NestJS, optimizando la recuperación de datos y reforzando la seguridad de las APIs REST.',
+        en: 'Redesigned NestJS endpoints, optimizing data retrieval and hardening REST API security.',
+      },
+      {
+        es: 'Colaboré en la arquitectura de componentes UI escalables para productos SaaS.',
+        en: 'Contributed to a scalable UI component architecture for SaaS products.',
+      },
+    ],
+    stack: ['React', 'React Native', 'Next.js', 'NestJS', 'GraphQL', 'REST'],
+  },
+  {
+    company: 'Orinoco Dev',
+    role: { es: 'Full Stack Developer', en: 'Full Stack Developer' },
+    from: '2019-03',
+    to: '2022-02',
+    highlights: [
+      {
+        es: 'Desarrollé flujos de cambio de divisas en tiempo real con Node.js y Vue.js, con **99.9% de uptime**.',
+        en: 'Built real-time currency exchange flows with Node.js and Vue.js, achieving **99.9% uptime**.',
+      },
+      {
+        es: 'Implementé pruebas E2E con Cypress y JMeter, **reduciendo errores en producción un 30%**.',
+        en: 'Implemented E2E and load tests with Cypress and JMeter, **reducing production errors by 30%**.',
+      },
+      {
+        es: 'Gestioné despliegues en entornos Linux de alta disponibilidad, integrando servicios de AWS.',
+        en: 'Managed high-availability deployments on Linux, integrating AWS services.',
+      },
+    ],
+    stack: ['Vue', 'Quasar', 'Node.js', 'GraphQL', 'MongoDB', 'Cypress', 'JMeter', 'AWS'],
+  },
+];
+
+const monthsBetween = (from: string, to?: string) => {
+  const [fy, fm] = from.split('-').map(Number);
+  const end = to ? to.split('-').map(Number) : [new Date().getFullYear(), new Date().getMonth() + 1];
+  return (end[0] - fy) * 12 + (end[1] - fm) + 1;
+};
+
+/** Años completos de experiencia sumando los periodos trabajados. */
+export const yearsOfExperience = Math.floor(jobs.reduce((sum, j) => sum + monthsBetween(j.from, j.to), 0) / 12);
+
+/* ───────────────────────── Impacto ───────────────────────── */
+
+export const impact: { value: number; decimals?: number; prefix?: string; suffix: string; label: Text; company: string }[] = [
+  {
+    value: 88,
+    prefix: '−',
+    suffix: '%',
+    label: { es: 'en tiempos de carga tras refactorizar React y React Native', en: 'load time after refactoring React and React Native' },
+    company: 'Cobuild Lab',
+  },
+  {
+    value: 500,
+    suffix: '+',
+    label: { es: 'transacciones diarias con pagos en tiempo real', en: 'daily transactions through real-time payments' },
+    company: 'Kraken Tech Studios',
+  },
+  {
+    value: 99.9,
+    decimals: 1,
+    suffix: '%',
+    label: { es: 'de uptime en flujos de cambio de divisas', en: 'uptime on currency exchange flows' },
+    company: 'Orinoco Dev',
+  },
+  {
+    value: 120,
+    suffix: '+',
+    label: { es: 'incidencias resueltas antes de producción con Husky + ESLint', en: 'issues caught before production with Husky + ESLint' },
+    company: 'QS Digital',
+  },
+];
 
 /* ───────────────────────── Proyectos ───────────────────────── */
 
-export type ProjectKind = 'client' | 'frontend' | 'backend' | 'mobile' | 'learning';
+export type ProjectKind = 'fullstack' | 'frontend' | 'backend' | 'ai' | 'mobile' | 'client' | 'learning';
 
 export interface Project {
   id: string;
   title: Text;
   description: Text;
+  /** Puntos técnicos destacados (solo se muestran en proyectos destacados). */
+  highlights?: Text[];
   kind: ProjectKind;
   stack: string[];
   demo?: string;
@@ -61,6 +222,97 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    id: 'altamar',
+    title: { es: 'Pescadería Altamar — ERP', en: 'Altamar Sea Food — ERP' },
+    description: {
+      es: 'ERP interno y sistema de inventario para mayoristas y minoristas de productos del mar en Venezuela: compra, pesaje, procesamiento, venta por peso y cobranza.',
+      en: 'Internal ERP and inventory system for seafood wholesalers and retailers in Venezuela: purchasing, weighing, processing, sales by weight and collections.',
+    },
+    highlights: [
+      {
+        es: 'Doble moneda USD / Bs con tasa BCV y paralela congelada por transacción, y cálculo de diferencial cambiario.',
+        en: 'Dual currency USD / Bs with BCV and parallel rates snapshotted per transaction, plus FX gain/loss tracking.',
+      },
+      {
+        es: 'Inventario costeado por lote físico con asignación PEPS (FIFO) y control de merma en el procesamiento.',
+        en: 'Inventory costed per physical lot with FIFO allocation and processing shrinkage control.',
+      },
+      {
+        es: 'Next.js App Router con Server Actions, Supabase (PostgreSQL) y tipado estricto de dominio.',
+        en: 'Next.js App Router with Server Actions, Supabase (PostgreSQL) and a strictly typed domain.',
+      },
+    ],
+    kind: 'fullstack',
+    stack: ['Next.js', 'React 19', 'TypeScript', 'Supabase', 'PostgreSQL', 'MUI', 'Zod', 'React Hook Form'],
+    demo: 'https://pescaderia-altamar.vercel.app',
+    repo: 'https://github.com/RamonTec/pescaderia-altamar',
+    featured: true,
+  },
+  {
+    id: 'typify',
+    title: { es: 'Typify', en: 'Typify' },
+    description: {
+      es: 'Herramienta para developers que convierte JSON en interfaces estrictas de TypeScript y esquemas Zod, en tiempo real.',
+      en: 'Developer tool that turns JSON into strict TypeScript interfaces and Zod schemas in real time.',
+    },
+    highlights: [
+      {
+        es: 'Detección de tipos unión en arrays heterogéneos y protección contra referencias circulares.',
+        en: 'Union type detection for mixed arrays and circular reference protection.',
+      },
+      {
+        es: 'Editor Monaco, formateo/minificado de JSON y lógica de tipado cubierta con Jest.',
+        en: 'Monaco editor, JSON format/minify and typing logic covered by Jest tests.',
+      },
+    ],
+    kind: 'frontend',
+    stack: ['React', 'Vite', 'TypeScript', 'Tailwind', 'Zod', 'Monaco', 'Jest'],
+    demo: 'https://typify-tawny.vercel.app',
+    repo: 'https://github.com/RamonTec/typify',
+    featured: true,
+  },
+  {
+    id: 'trading-bot',
+    title: { es: 'Trading Bot con IA', en: 'AI Trading Bot' },
+    description: {
+      es: 'Bot de trading en Python que usa un LLM local (Ollama) para analizar cálculos de mercado y decidir órdenes de compra y venta en Binance Testnet.',
+      en: 'Python trading bot that uses a local LLM (Ollama) to analyze market calculations and place buy/sell orders on Binance Testnet.',
+    },
+    highlights: [
+      {
+        es: 'El LLM interpreta los resultados calculados en Python y decide la operación.',
+        en: 'The LLM interprets the indicators computed in Python and decides the trade.',
+      },
+      {
+        es: 'Lógica separada en piezas pequeñas siguiendo el principio de responsabilidad única.',
+        en: 'Logic split into small pieces following the single responsibility principle.',
+      },
+    ],
+    kind: 'ai',
+    stack: ['Python', 'Ollama', 'LLM', 'Binance API'],
+    repo: 'https://github.com/RamonTec/trading_bot',
+    featured: true,
+  },
+  {
+    id: 'pokedex',
+    title: { es: 'Pokédex', en: 'Pokédex' },
+    description: {
+      es: 'Explorador de Pokémon con Next.js enfocado en optimizar la carga de imágenes para evitar sobrecarga.',
+      en: 'Next.js Pokémon explorer focused on optimizing image loading to avoid overload.',
+    },
+    highlights: [
+      {
+        es: 'Loader de imágenes personalizado con next/image y scroll infinito.',
+        en: 'Custom image loader with next/image and infinite scroll.',
+      },
+    ],
+    kind: 'frontend',
+    stack: ['Next.js', 'TypeScript', 'Tailwind', 'MUI'],
+    demo: 'https://pokedex-nextjs-rust.vercel.app',
+    repo: 'https://github.com/RamonTec/pokedex-nextjs',
+    featured: true,
+  },
   {
     id: 'urano-jets',
     title: { es: 'Urano Jets', en: 'Urano Jets' },
@@ -74,6 +326,16 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    id: 'wheelers',
+    title: { es: 'Wheelers', en: 'Wheelers' },
+    description: {
+      es: 'API REST para gestionar colecciones de autos, con Clean Architecture, esquemas de base de datos propios y lógica de negocio desacoplada.',
+      en: 'REST API to manage collectible cars, built with Clean Architecture, custom database schemas and decoupled business logic.',
+    },
+    kind: 'backend',
+    stack: ['NestJS', 'TypeScript', 'Clean Architecture'],
+  },
+  {
     id: 'api-sales',
     title: { es: 'API de tienda virtual', en: 'Online store API' },
     description: {
@@ -83,7 +345,6 @@ export const projects: Project[] = [
     kind: 'backend',
     stack: ['NestJS', 'MongoDB', 'TypeScript', 'REST'],
     repo: 'https://github.com/RamonTec/api-sales',
-    featured: true,
   },
   {
     id: 'ruleta',
@@ -96,7 +357,6 @@ export const projects: Project[] = [
     stack: ['React', 'Vite', 'TypeScript', 'Tailwind', 'canvas-confetti'],
     demo: 'https://ruleta-two.vercel.app/',
     repo: 'https://github.com/RamonTec/ruleta',
-    featured: true,
   },
   {
     id: 'orion-studios',
@@ -127,7 +387,7 @@ export const projects: Project[] = [
       es: 'Maquetación de la interfaz de YouTube con React y Tailwind.',
       en: 'YouTube interface layout built with React and Tailwind.',
     },
-    kind: 'frontend',
+    kind: 'learning',
     stack: ['React', 'Tailwind'],
     demo: 'https://youtube-test-orpin.vercel.app/',
     repo: 'https://github.com/RamonTec/youtube-test',
@@ -139,7 +399,7 @@ export const projects: Project[] = [
       es: 'Aplicación para calcular promedios académicos.',
       en: 'App to calculate academic grade averages.',
     },
-    kind: 'frontend',
+    kind: 'learning',
     stack: ['Vue', 'Quasar'],
     demo: 'https://promedios.vercel.app/#/',
   },
@@ -168,99 +428,6 @@ export const projects: Project[] = [
   },
 ];
 
-/* ───────────────────────── Experiencia ───────────────────────── */
-
-export interface Job {
-  company: string;
-  from: number;
-  to?: number;
-  roles: { title: Text; description: Text }[];
-  stack: string[];
-}
-
-export const jobs: Job[] = [
-  {
-    company: 'QS Digital',
-    from: 2024,
-    roles: [
-      {
-        title: { es: 'Desarrollador Frontend', en: 'Frontend Developer' },
-        description: {
-          es: 'Desarrollo de aplicaciones web con React, Angular, Next.js, Bootstrap y TypeScript.',
-          en: 'Web application development with React, Angular, Next.js, Bootstrap and TypeScript.',
-        },
-      },
-      {
-        title: { es: 'Scrum Master', en: 'Scrum Master' },
-        description: {
-          es: 'Facilitación de ceremonias ágiles y mejora continua de procesos del equipo.',
-          en: 'Facilitating agile ceremonies and continuously improving team processes.',
-        },
-      },
-    ],
-    stack: ['React', 'Angular', 'Next.js', 'TypeScript', 'Bootstrap', 'Scrum'],
-  },
-  {
-    company: 'Kraken Tech Studios',
-    from: 2023,
-    to: 2023,
-    roles: [
-      {
-        title: { es: 'Desarrollador Frontend', en: 'Frontend Developer' },
-        description: {
-          es: 'Desarrollo de aplicaciones web con React, Next.js, TypeScript y MUI.',
-          en: 'Web application development with React, Next.js, TypeScript and MUI.',
-        },
-      },
-    ],
-    stack: ['React', 'Next.js', 'TypeScript', 'MUI'],
-  },
-  {
-    company: 'Cobuild Lab',
-    from: 2022,
-    to: 2023,
-    roles: [
-      {
-        title: { es: 'Desarrollador Frontend', en: 'Frontend Developer' },
-        description: {
-          es: 'Aplicaciones web con React, Next.js y TypeScript, integración de APIs y apps móviles con React Native.',
-          en: 'Web apps with React, Next.js and TypeScript, API integration and mobile apps with React Native.',
-        },
-      },
-      {
-        title: { es: 'Desarrollador Backend', en: 'Backend Developer' },
-        description: {
-          es: 'Desarrollo de APIs GraphQL y modelado de bases de datos relacionales.',
-          en: 'GraphQL API development and relational database modeling.',
-        },
-      },
-    ],
-    stack: ['React', 'Next.js', 'React Native', 'GraphQL', 'SQL'],
-  },
-  {
-    company: 'Orinoco Dev',
-    from: 2019,
-    to: 2022,
-    roles: [
-      {
-        title: { es: 'Desarrollador Frontend', en: 'Frontend Developer' },
-        description: {
-          es: 'Aplicaciones web con Vue y Quasar, integración de APIs y sitios responsivos.',
-          en: 'Web apps with Vue and Quasar, API integration and responsive websites.',
-        },
-      },
-      {
-        title: { es: 'Desarrollador Backend', en: 'Backend Developer' },
-        description: {
-          es: 'APIs GraphQL y modelado con MongoDB, integrando servicios de AWS (S3, EC2, SNS).',
-          en: 'GraphQL APIs and MongoDB modeling, integrating AWS services (S3, EC2, SNS).',
-        },
-      },
-    ],
-    stack: ['Vue', 'Quasar', 'GraphQL', 'MongoDB', 'AWS'],
-  },
-];
-
 /* ───────────────────────── Stack ───────────────────────── */
 
 export interface Tech {
@@ -281,10 +448,13 @@ export const stackGroups: { id: string; title: Text; items: Tech[] }[] = [
       { name: 'Angular', icon: SiAngular, color: '#dd0031' },
       { name: 'Vue', icon: SiVuedotjs, color: '#42b883' },
       { name: 'React Native', icon: SiReact, color: '#61dafb' },
+      { name: 'React Query', icon: SiReactquery, color: '#ff4154' },
+      { name: 'React Table', icon: SiReacttable, color: '#ff4154' },
+      { name: 'React Hook Form', icon: SiReacthookform, color: '#ec5990' },
+      { name: 'Zod', icon: SiZod, color: '#3e67b1' },
       { name: 'Tailwind', icon: SiTailwindcss, color: '#38bdf8' },
       { name: 'Material UI', icon: SiMui, color: '#007fff' },
       { name: 'Quasar', icon: SiQuasar, color: '#1976d2' },
-      { name: 'Bootstrap', icon: SiBootstrap, color: '#7952b3' },
     ],
   },
   {
@@ -294,31 +464,49 @@ export const stackGroups: { id: string; title: Text; items: Tech[] }[] = [
       { name: 'Node.js', icon: SiNodedotjs, color: '#5fa04e' },
       { name: 'NestJS', icon: SiNestjs, color: '#e0234e' },
       { name: 'Express', icon: SiExpress, color: '#ffffff' },
+      { name: 'REST APIs', icon: TbApi, color: '#4eecb9' },
       { name: 'GraphQL', icon: SiGraphql, color: '#e10098' },
+      { name: 'PostgreSQL', icon: SiPostgresql, color: '#4169e1' },
+      { name: 'Supabase', icon: SiSupabase, color: '#3ecf8e' },
       { name: 'MongoDB', icon: SiMongodb, color: '#47a248' },
       { name: 'Firebase', icon: SiFirebase, color: '#ffca28' },
       { name: 'AWS', icon: FaAws, color: '#ff9900' },
     ],
   },
   {
+    id: 'quality',
+    title: { es: 'Calidad & testing', en: 'Quality & testing' },
+    items: [
+      { name: 'Jest', icon: SiJest, color: '#c21325' },
+      { name: 'Cypress', icon: SiCypress, color: '#69d3a7' },
+      { name: 'JMeter', icon: SiApachejmeter, color: '#d22128' },
+      { name: 'ESLint', icon: SiEslint, color: '#4b32c3' },
+      { name: 'Husky', icon: TbDog, color: '#e5e5e5' },
+    ],
+  },
+  {
     id: 'tools',
-    title: { es: 'Herramientas', en: 'Tooling' },
+    title: { es: 'Herramientas & IA', en: 'Tooling & AI' },
     items: [
       { name: 'Git', icon: SiGit, color: '#f05032' },
       { name: 'Vite', icon: SiVite, color: '#a855f7' },
+      { name: 'Linux', icon: SiLinux, color: '#fcc624' },
+      { name: 'Python', icon: SiPython, color: '#3776ab' },
+      { name: 'Ollama', icon: SiOllama, color: '#ffffff' },
+      { name: 'Binance API', icon: SiBinance, color: '#f0b90b' },
     ],
   },
 ];
 
 export const softSkills: Text[] = [
-  { es: 'Trabajo en equipo', en: 'Teamwork' },
+  { es: 'Code review', en: 'Code review' },
+  { es: 'Pair programming', en: 'Pair programming' },
+  { es: 'Planificación de sprints', en: 'Sprint planning' },
+  { es: 'Scrum', en: 'Scrum' },
   { es: 'Comunicación efectiva', en: 'Clear communication' },
   { es: 'Resolución de problemas', en: 'Problem solving' },
-  { es: 'Proactividad', en: 'Proactivity' },
-  { es: 'Adaptabilidad', en: 'Adaptability' },
   { es: 'Pensamiento crítico', en: 'Critical thinking' },
-  { es: 'Manejo del tiempo', en: 'Time management' },
-  { es: 'Empatía', en: 'Empathy' },
+  { es: 'Proactividad', en: 'Proactivity' },
 ];
 
 /* ───────────────────────── Formación ───────────────────────── */

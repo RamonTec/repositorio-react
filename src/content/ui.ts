@@ -12,9 +12,9 @@ export const ui = {
     hero: {
       available: 'Abierto a nuevas oportunidades',
       hello: 'Hola, soy',
-      roles: ['Frontend Developer', 'React & Next.js', 'TypeScript lover', 'Full-stack cuando hace falta'],
+      roles: ['Senior Frontend Developer', 'React & Next.js', 'TypeScript', 'Full-stack con NestJS'],
       pitch:
-        'Construyo interfaces rápidas, claras y mantenibles. Llevo {years} años convirtiendo ideas en productos web con React, Next.js y TypeScript, y aporto experiencia backend con NestJS, GraphQL y MongoDB.',
+        'Construyo interfaces escalables, rápidas y mantenibles para productos enterprise y SaaS. +{years} años con React, Next.js y TypeScript: monorepos, integración con APIs REST, pagos en tiempo real y una obsesión sana por la calidad del código.',
       ctaWork: 'Ver proyectos',
       ctaCv: 'Descargar CV',
       ctaContact: 'Hablemos',
@@ -24,12 +24,18 @@ export const ui = {
         projects: 'proyectos',
       },
     },
+    impact: {
+      title: 'Resultados que he entregado',
+      lead: 'Lo que más me importa no es la tecnología, sino el impacto que tiene en el producto.',
+    },
     work: {
       title: 'Proyectos seleccionados',
       lead: 'Trabajo para clientes y proyectos personales donde exploro nuevas herramientas.',
       more: 'Más proyectos',
       all: 'Todos',
       kinds: {
+        fullstack: 'Full-stack',
+        ai: 'IA',
         client: 'Clientes',
         frontend: 'Frontend',
         backend: 'Backend',
@@ -42,7 +48,7 @@ export const ui = {
     },
     experience: {
       title: 'Experiencia',
-      lead: 'Equipos de producto donde he pasado de frontend a backend y a facilitar el proceso ágil.',
+      lead: 'Equipos de producto enterprise y SaaS donde he pasado de frontend a full-stack y a liderar el proceso.',
       present: 'Actualidad',
     },
     stack: {
@@ -50,7 +56,7 @@ export const ui = {
       lead: 'Herramientas con las que trabajo a diario y en producción.',
       how: 'Cómo trabajo',
       howLead:
-        'Además de escribir código, he sido Scrum Master: facilito ceremonias, desbloqueo al equipo y cuido que lo que se entrega tenga sentido para el negocio.',
+        'Además de escribir código he liderado equipos como Project Manager: planifico sprints, hago code reviews y pair programming, y automatizo la calidad con Husky + ESLint para que lo que llega a producción funcione.',
     },
     education: {
       title: 'Formación',
@@ -92,9 +98,9 @@ export const ui = {
     hero: {
       available: 'Open to new opportunities',
       hello: "Hi, I'm",
-      roles: ['Frontend Developer', 'React & Next.js', 'TypeScript lover', 'Full-stack when needed'],
+      roles: ['Senior Frontend Developer', 'React & Next.js', 'TypeScript', 'Full-stack with NestJS'],
       pitch:
-        'I build fast, clear and maintainable interfaces. For {years} years I have been turning ideas into web products with React, Next.js and TypeScript, backed by hands-on experience with NestJS, GraphQL and MongoDB.',
+        'I build scalable, fast and maintainable interfaces for enterprise and SaaS products. {years}+ years with React, Next.js and TypeScript: monorepos, REST API integration, real-time payments and a healthy obsession with code quality.',
       ctaWork: 'See my work',
       ctaCv: 'Download CV',
       ctaContact: "Let's talk",
@@ -104,12 +110,18 @@ export const ui = {
         projects: 'projects',
       },
     },
+    impact: {
+      title: 'Results I have delivered',
+      lead: 'What matters most to me is not the tech itself, but the impact it has on the product.',
+    },
     work: {
       title: 'Selected work',
       lead: 'Client work and personal projects where I explore new tools.',
       more: 'More projects',
       all: 'All',
       kinds: {
+        fullstack: 'Full-stack',
+        ai: 'AI',
         client: 'Clients',
         frontend: 'Frontend',
         backend: 'Backend',
@@ -122,7 +134,7 @@ export const ui = {
     },
     experience: {
       title: 'Experience',
-      lead: 'Product teams where I went from frontend to backend to facilitating the agile process.',
+      lead: 'Enterprise and SaaS product teams where I went from frontend to full-stack to leading the process.',
       present: 'Present',
     },
     stack: {
@@ -130,7 +142,7 @@ export const ui = {
       lead: 'Tools I use daily and in production.',
       how: 'How I work',
       howLead:
-        "Beyond writing code, I've worked as a Scrum Master: running ceremonies, unblocking the team and making sure what we ship makes sense for the business.",
+        'Beyond writing code, I have led teams as a Project Manager: planning sprints, running code reviews and pair programming, and automating quality with Husky + ESLint so what reaches production works.',
     },
     education: {
       title: 'Education',

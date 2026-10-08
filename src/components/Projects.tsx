@@ -8,7 +8,9 @@ import Section, { reveal } from './Section';
 import SpotlightCard from './SpotlightCard';
 
 const kindColor: Record<ProjectKind, string> = {
-  client: '#4eecb9',
+  fullstack: '#4eecb9',
+  ai: '#fb923c',
+  client: '#2dd4bf',
   frontend: '#61dafb',
   backend: '#f472b6',
   mobile: '#a78bfa',
@@ -115,6 +117,18 @@ function FeaturedCard({ project, wide }: { project: Project; wide?: boolean }) {
             </div>
             <h3 className="text-2xl font-semibold text-white">{t(project.title)}</h3>
             <p className="text-zinc-400">{t(project.description)}</p>
+            {project.highlights && (
+              <ul className="space-y-1.5">
+                {project.highlights.map((h) => (
+                  <li key={h.en} className="relative pl-5 text-sm leading-relaxed text-zinc-400">
+                    <span aria-hidden className="absolute left-0 font-mono" style={{ color: kindColor[project.kind] }}>
+                      ✓
+                    </span>
+                    {t(h)}
+                  </li>
+                ))}
+              </ul>
+            )}
             <ul className="flex flex-wrap gap-1.5">
               {project.stack.map((s) => (
                 <li key={s} className="chip">
@@ -167,7 +181,7 @@ export default function Projects() {
   const visible = filter === 'all' ? rest : rest.filter((p) => p.kind === filter);
 
   return (
-    <Section id="work" index="01" title={ui.work.title} lead={ui.work.lead}>
+    <Section id="work" index="02" title={ui.work.title} lead={ui.work.lead}>
       <motion.div
         className="grid gap-5 md:grid-cols-2"
         initial="hidden"

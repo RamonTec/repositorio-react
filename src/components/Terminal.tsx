@@ -38,11 +38,11 @@ export default function Terminal() {
           {'],\n  '}
           <span className="text-rose-400">"backend"</span>
           {': ['}
-          <span className="text-mint-300">"NestJS", "GraphQL", "MongoDB"</span>
+          <span className="text-mint-300">"NestJS", "Node.js", "PostgreSQL"</span>
           {'],\n  '}
           <span className="text-rose-400">"agile"</span>
           {': '}
-          <span className="text-mint-300">"Scrum Master"</span>
+          <span className="text-mint-300">"Scrum · PM"</span>
           {'\n}'}
         </pre>
       ),

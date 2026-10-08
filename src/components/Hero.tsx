@@ -17,7 +17,7 @@ const item = {
 };
 
 export default function Hero() {
-  const { ui } = useLanguage();
+  const { t, ui } = useLanguage();
   const role = useTypewriter(ui.hero.roles);
 
   const stats = [
@@ -68,7 +68,7 @@ export default function Hero() {
               {ui.hero.ctaWork}
               <HiArrowDown className="h-4 w-4" />
             </a>
-            <a href={profile.cv} download="CV Elias Estrabao.pdf" className="btn-ghost">
+            <a href={t(profile.cv)} download="CV Elias Estrabao.pdf" className="btn-ghost">
               <HiArrowDownTray className="h-4 w-4" />
               {ui.hero.ctaCv}
             </a>

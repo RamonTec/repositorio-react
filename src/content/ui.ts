@@ -1,0 +1,166 @@
+import type { Lang } from './data';
+
+export const ui = {
+  es: {
+    nav: {
+      work: 'Proyectos',
+      experience: 'Experiencia',
+      stack: 'Stack',
+      education: 'Formación',
+      contact: 'Contacto',
+    },
+    hero: {
+      available: 'Abierto a nuevas oportunidades',
+      hello: 'Hola, soy',
+      roles: ['Frontend Developer', 'React & Next.js', 'TypeScript lover', 'Full-stack cuando hace falta'],
+      pitch:
+        'Construyo interfaces rápidas, claras y mantenibles. Llevo {years} años convirtiendo ideas en productos web con React, Next.js y TypeScript, y aporto experiencia backend con NestJS, GraphQL y MongoDB.',
+      ctaWork: 'Ver proyectos',
+      ctaCv: 'Descargar CV',
+      ctaContact: 'Hablemos',
+      stats: {
+        years: 'años de experiencia',
+        companies: 'empresas',
+        projects: 'proyectos',
+      },
+    },
+    work: {
+      title: 'Proyectos seleccionados',
+      lead: 'Trabajo para clientes y proyectos personales donde exploro nuevas herramientas.',
+      more: 'Más proyectos',
+      all: 'Todos',
+      kinds: {
+        client: 'Clientes',
+        frontend: 'Frontend',
+        backend: 'Backend',
+        mobile: 'Mobile',
+        learning: 'Práctica',
+      },
+      demo: 'Ver demo',
+      code: 'Código',
+      featured: 'Destacado',
+    },
+    experience: {
+      title: 'Experiencia',
+      lead: 'Equipos de producto donde he pasado de frontend a backend y a facilitar el proceso ágil.',
+      present: 'Actualidad',
+    },
+    stack: {
+      title: 'Stack',
+      lead: 'Herramientas con las que trabajo a diario y en producción.',
+      how: 'Cómo trabajo',
+      howLead:
+        'Además de escribir código, he sido Scrum Master: facilito ceremonias, desbloqueo al equipo y cuido que lo que se entrega tenga sentido para el negocio.',
+    },
+    education: {
+      title: 'Formación',
+      lead: 'Base académica y aprendizaje continuo.',
+      degree: 'Título',
+      tech: 'Técnicos',
+      english: 'Inglés',
+      showAll: 'Ver todos',
+      showLess: 'Ver menos',
+    },
+    contact: {
+      title: '¿Construimos algo juntos?',
+      lead: 'Si tienes un proyecto, una vacante o simplemente quieres conversar, escríbeme. Respondo rápido.',
+      direct: 'Canales directos',
+      name: 'Nombre',
+      email: 'Correo',
+      message: 'Mensaje',
+      placeholder: 'Cuéntame sobre tu proyecto…',
+      send: 'Enviar mensaje',
+      sending: 'Enviando…',
+      success: '¡Mensaje enviado! Te responderé pronto.',
+      error: 'No se pudo enviar. Escríbeme directamente a {email}.',
+      copy: 'Copiar correo',
+      copied: 'Correo copiado',
+    },
+    footer: {
+      built: 'Diseñado y desarrollado por',
+      top: 'Volver arriba',
+    },
+  },
+  en: {
+    nav: {
+      work: 'Work',
+      experience: 'Experience',
+      stack: 'Stack',
+      education: 'Education',
+      contact: 'Contact',
+    },
+    hero: {
+      available: 'Open to new opportunities',
+      hello: "Hi, I'm",
+      roles: ['Frontend Developer', 'React & Next.js', 'TypeScript lover', 'Full-stack when needed'],
+      pitch:
+        'I build fast, clear and maintainable interfaces. For {years} years I have been turning ideas into web products with React, Next.js and TypeScript, backed by hands-on experience with NestJS, GraphQL and MongoDB.',
+      ctaWork: 'See my work',
+      ctaCv: 'Download CV',
+      ctaContact: "Let's talk",
+      stats: {
+        years: 'years of experience',
+        companies: 'companies',
+        projects: 'projects',
+      },
+    },
+    work: {
+      title: 'Selected work',
+      lead: 'Client work and personal projects where I explore new tools.',
+      more: 'More projects',
+      all: 'All',
+      kinds: {
+        client: 'Clients',
+        frontend: 'Frontend',
+        backend: 'Backend',
+        mobile: 'Mobile',
+        learning: 'Practice',
+      },
+      demo: 'Live demo',
+      code: 'Code',
+      featured: 'Featured',
+    },
+    experience: {
+      title: 'Experience',
+      lead: 'Product teams where I went from frontend to backend to facilitating the agile process.',
+      present: 'Present',
+    },
+    stack: {
+      title: 'Stack',
+      lead: 'Tools I use daily and in production.',
+      how: 'How I work',
+      howLead:
+        "Beyond writing code, I've worked as a Scrum Master: running ceremonies, unblocking the team and making sure what we ship makes sense for the business.",
+    },
+    education: {
+      title: 'Education',
+      lead: 'Academic foundation and continuous learning.',
+      degree: 'Degree',
+      tech: 'Technical',
+      english: 'English',
+      showAll: 'Show all',
+      showLess: 'Show less',
+    },
+    contact: {
+      title: "Let's build something together",
+      lead: "Whether it's a project, a role or just a chat, drop me a line. I reply quickly.",
+      direct: 'Direct channels',
+      name: 'Name',
+      email: 'Email',
+      message: 'Message',
+      placeholder: 'Tell me about your project…',
+      send: 'Send message',
+      sending: 'Sending…',
+      success: 'Message sent! I will get back to you soon.',
+      error: "Couldn't send it. Please email me directly at {email}.",
+      copy: 'Copy email',
+      copied: 'Email copied',
+    },
+    footer: {
+      built: 'Designed & built by',
+      top: 'Back to top',
+    },
+  },
+} satisfies Record<Lang, unknown>;
+
+export type UI = (typeof ui)['es'];

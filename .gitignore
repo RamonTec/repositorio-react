@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# vite / vercel
+/dist
+.env
+.vercel
+.claude/launch.json
